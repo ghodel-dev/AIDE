@@ -1,0 +1,208 @@
+TrunksKu MOD
+Added v1 + v2 sign scheme
+Added ZipAlign
+Added Apk to Aab
+
+JohnAlvin (JA) MOD
+Changed Chinese Texts
+Fix Android Jar
+
+V3.2.1 (20210705)
+Update Android.jar to S
+API Version update to S
+Version number to 3.2.1
+
+
+V3.2.0 (20210627)
+New tool color selection
+Update libgdx is 1.10.0
+Some details optimize
+Slimming this software volume
+
+V3.1.0 (20210522)
+Add a set header location
+Terminal watching to cancel
+Pattern of optimization header
+Remove Android 11 package restrictions
+
+V3.0.5 (20210515)
+Optimize new class dialog
+Optimize the list of Gradle projects
+New projects added to each item .APP
+New class header (setting)
+
+V3.0.1 (20210511)
+Update libgdx is 1.9.15
+Slimming application volume
+Streamline list list
+Discard compile (will report an error)
+Support for more grapertle dependent API display
+Adjustable project target SDK
+Repair part is known to be BUG
+
+V2.6.41 (20201206)
+Repair Bug
+Add a basic template
+Adjust TOAST
+
+V2.6.4 (20201130)
+Try to use the transparent suspended window fault service to be repaired back
+Delete AIDesamples.zip, 50M -> 38M
+
+V2.6.33 (20201122)
+Replace the command output information box
+
+V2.6.3 (20201106)
+Upgrade the gradle function, add build, assemblydebug, askemblerelease command
+
+V2.6.2 (20201020)
+Adjustment template
+Optimize compilation pop-up window
+File browser supports the icon for displaying the project
+
+V2.6 (20201007)
+Integrated Gradle Compilation
+Code completion box support View API Version
+
+V2.5.5 (20201004)
+Fix several bugs
+Billion adjustments
+
+V2.5.4 (20200829)
+Fix several bugs
+Add a few bugs
+
+V2.5.3 (20200828)
+Repair low system version DEX merge bug
+Re-add AppCompat template
+
+V2.5.2 (20200827)
+Fix DEX merge bug
+
+V2.5 (20200826)
+{
+  "New": [
+    "DEX Bracket Repair function"
+  ],
+  "Adjustment": [
+    "Update icon library",
+    "Adjust the Tab button, do not use it to delete 4",
+    "Optimize file creation, support for the creation of multi-level directory A / B / C / D.JAVA",
+    "Bright theme mode is allowed by the system to force Night"
+    "Optimize the following documents to view"
+    "Ui beautification"
+  ],
+  "repair":[
+  "When there is Androidmanifest.xml in the parent directory, the creation project item is not displayed (only in the parent directory is in the internal storage directory)"
+  ]
+  "Template": [
+    "Delete AppCompat Modules"
+  ],
+  "translation": [
+    "Remove Yandex translation, use new interfaces",
+    "Removing the RES String Translation Function",
+    "Optimize Translation Request Logic"
+  ]
+}
+
+V2.4.9 (20200613);
+{
+  "Repair": [
+    "Open file high bright index",
+    "VIEW2JAVA array length is not uniformly caused by flashback",
+    "Repair the IS stream of the common code file is closed after being turned off"
+  ]
+}
+
+V2.4.8 (20200611)
+{
+  "Adjustment": [
+    "Default Close Chinese Complete",
+    "Adjust setting, function classification",
+    "Adjust file sort",
+    "Small adaptation Night mode",
+    "Replace Android.jar to R"
+  ],
+  "Repair": [
+    "Repair ActionBar Bug",
+    "Repair Turn off the Dialog input method still display bug (except for a small number of scenes),
+    "The repair item sometimes clicks the bug without reactive"
+  ],
+  "New": [
+    "Add two built categories. (Service and Broadcast Receiver)"
+  ]
+}
+
+V2.4.6 (20200522)
+Document browser
+Advanced settings and settings merge
+File browser folder can display a small corner
+
+V2.4.3 (20200519)
+Repair Click notification bar
+Repair bugs that can slide upward after SplitView after the enabled side slide
+Optimize the editing box dialog, the content of the smart selection file name before the decimal point
+Add a custom Gradle completion
+
+V2.4 (20200516)
+Support custom engineering path
+Adaptive Adaptive Icon & Shortcut (Android8.0 +)
+Optimize horizontal screen state
+Bug repair
+
+v2.3.6 (20200426)
+Support English
+
+v2.3.5 (20200424)
+UI adjustment
+
+V2.3.2 (20200405)
+Chinese UI Designer (to advanced settings)
+
+V2.3 (20200116)
+Rewriting "Add to Project ..." and "Add New Category ..."
+File browser supports display pictures, install APK
+
+V2.0 (20191216)
+Be too lazy.
+(20201206 supplement)
+Modify the side slip file browser
+Increase indigo theme
+Support for 5.0+
+Delete some function options
+Can't get up
+
+v1.6.0 (20191111)
+New StringFog function
+New AppCompat and Androidx Engineering Mutual Transfer (Menu Bar - More - More)
+Custom Edit Box Shortcut Sign Node Java, XML
+Long press Select a paragraph to select the translation in the menu bar
+Hanhua partial code error prompt
+Optimize translation word logic
+Some functional adjustments, bug fix
+
+V1.5.0 (20191025)
+New RES resource confusion
+New icon center
+Code highlighting configuration more parameters
+Migrate to Aide 3.2.191010
+
+V1.2.3 (20191018)
+Fixed FindVewID issues
+Repair translation failed return code problem
+Repair dark topics After switching to tutorial mode Edit box background color problem
+Add a project template
+Added Settings Search Results Maximum Display Route Options
+Optimized color picker
+Code highlighting to modify the line number color
+
+v1.2.1 (20191003)
+Mainly repair some bugs
+Added dialog box options when the file is not opened
+
+V1.2 (20191002)
+New code completion automatic translation
+New Relief APK Build Path
+
+Before V1.1
+Lost ... _ (: з "∠) _

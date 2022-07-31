@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_marginRight="20.0dip"
+                    android:src="@drawable/shape_circle"
+                    android:tint="#ffcccccc"
+                    android:layout_marginEnd="20.0dip" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:background="#ffcccccc"
+                        android:layout_width="70.0dip"
+                        android:layout_height="10.0dip" />
+                    <View
+                        android:background="#ffcccccc"
+                        android:layout_width="110.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginTop="10.0dip" />
+                    <View
+                        android:background="#ffcccccc"
+                        android:layout_width="40.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginTop="10.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip">
+                <ImageView
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_marginRight="20.0dip"
+                    android:src="@drawable/shape_circle"
+                    android:tint="#ffe6e6e6"
+                    android:layout_marginEnd="20.0dip" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:background="#ffe6e6e6"
+                        android:layout_width="100.0dip"
+                        android:layout_height="10.0dip" />
+                    <View
+                        android:background="#ffe6e6e6"
+                        android:layout_width="140.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginTop="10.0dip" />
+                    <View
+                        android:background="#ffe6e6e6"
+                        android:layout_width="40.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_marginTop="10.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:textSize="17.0sp"
+            android:id="@id/mainNoOpenFilesView"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip"
+            android:text="@string/view_no_open_files" />
+    </LinearLayout>
+</merge>

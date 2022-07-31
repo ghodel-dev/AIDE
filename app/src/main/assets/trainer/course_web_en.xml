@@ -1,0 +1,1442 @@
+<Course
+    release_date="2014-10-01"
+    icon="ic_launcher_web"
+	title="Web Development"
+    full_title="web development"  
+    explore_section="Explore real-world sample websites"
+	code_section="Build a professional website"
+	code_template="Start with this empty project template to create your own web site.">
+	
+    <Files 
+        template="simple_project"
+        project_name="My Website">
+    	<CodeFile name="index.html" />    
+    </Files>
+    
+    
+    <Sample
+        id="Bootstrap Components" 
+        title="Bootstrap Components" 
+        description="Explore a gallery of Bootstrap components."
+        release_date="2014-10-01">
+
+        <CodeFile name="index.html" />
+    </Sample>
+    
+    <Sample
+        id="Bootstrap Jumbotron"
+        title="Bootstrap Jumbotron"
+        description="Explore how to build a web page around a jumbotron with a navbar and some basic grid columns."
+        release_date="2014-10-01" >
+
+        <CodeFile name="index.html" />
+		<CodeFile name="styles.css" />
+    </Sample>
+    
+    <Sample
+        id="Bootstrap Carousel" 
+        title="Bootstrap Carousel" 
+        description="Explore how to build a web page with a carousel and a navbar."
+        release_date="2014-10-01">
+
+        <CodeFile name="index.html" />
+		<CodeFile name="styles.css" />
+    </Sample>
+    
+    <Sample
+        id="Bootstrap Blog" 
+        title="Bootstrap Blog" 
+        description="Explore how to build a two-column blog page with custom navigation, header, and type."
+        release_date="2014-10-01">
+
+        <CodeFile name="index.html" />
+		<CodeFile name="styles.css" />
+    </Sample>
+    
+    <Sample
+        id="Bootstrap Dashboard"
+        title="Bootstrap Dashboard"
+        description="Explore how to build a basic admin dashboard page with fixed sidebar and navbar."
+        release_date="2014-10-01" >
+
+        <CodeFile name="index.html" />
+		<CodeFile name="styles.css" />
+    </Sample>
+    
+    
+    
+    
+    
+    <Lesson
+    	section="Start from here to learn web development! In these interactive lessons you will step-by-step learn to build websites with HTML, CSS and JavaScript."
+	    title="Hello World"
+		example="&lt;h1&gt;Hello World&lt;/h1&gt;"
+		description="In this lesson you'll learn to build your first website.">
+
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>Hello$code_hint$ World</h1>
+
+    <p>This is my first website</p>
+
+  </body>
+</html>				
+				]]>
+	        </SourceCode>
+	        <Run  success="Great, you've just build your first website! You can see it below. Let's continue." />
+	    </Exercise>
+	    <Exercise
+	        task="Now modify the HTML code at the blue arrow in the web page below to show '_Hi World_'. Then run."
+	        level="5" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Just change the text '_Hello World_' to '_Hi World_'.">
+				<![CDATA[<h1>Hi World]]>
+	        </ExpectedCode>
+	        <Run success="Awesome! You have changed the website to show '_Hi World_'." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've finished the first web development lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+    
+    
+    
+    
+    <Lesson
+	    title="Website Structure"
+		example="&lt;html&gt; &lt;head&gt;"
+		description="In this lesson you'll learn about the basic structure of a website using HTML, CSS and JavaScript.">
+
+        <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+        	<CodeFile name="styles.css" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+    
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>$code_hint$
+  <head>
+    <link href="css/styles.css$code_hint_1$" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website$code_hint_3$</h1>
+
+    <p id="time">Time</p>
+
+	<script src="js/scripts.js$code_hint_2$"></script>
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+body$code_hint$
+{
+  font-size: 1em;$code_hint_1$
+}	
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+(function () {$code_hint$
+
+    var timeEl = document.getElementById("time");
+    timeEl.innerHTML = new Date();$code_hint_1$
+    
+})();
+				]]>
+	        </SourceCode>	
+	        <Run  success="Great! Below you can see how a web browser displays the website. Let's see how it works." />
+	    </Exercise>
+	    <Exercise
+	        task="This is the main web page of this website. The HTML code in this file describes the visual elements of the web page. HTML is a markup language for describing web documents. Press on the blue arrow, then continue."
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The HTML code uses a !_link_! tag to specify the CSS file !_styles.css_! for the visual styles of the page."
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The HTML code uses a !_script_! tag to specify the JavaScript file !_scripts.js_! for the dynamic behavior of the page."
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint_2 />
+	    </Exercise>
+	    <Exercise
+	        task="The CSS file !_styles.css_! defines the visual styles of the web page."
+	        code_file="styles.css"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="This !_font_size_! CSS style for example defines the font size in the body of the web page."
+	        code_file="styles.css"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The JavaScript file !_scripts.js_! defines the dynamic behavior of the web page."
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="This JavaScript code for example makes the web page show the current date and time."
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint_1 />
+	        <Run  success="As you see the web page displays the current date and time. Let's modify it a bit." />
+	    </Exercise>
+	    <Exercise
+	        task="Modify the HTML code at the blue arrow to show '_Current Time_'. Then run."
+	        code_file="index.html"
+	        level="5" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="Just change the text '_My Website_' to '_Current Time_'.">
+				<![CDATA[<h1>Current Time]]>
+	        </ExpectedCode>
+	        <Run success="Awesome!" />
+	    </Exercise>
+	    <Exercise
+	        task="Change the !_font_size_! to !_2em_!. Then run."
+	        code_file="styles.css"
+	        level="5" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Just change the line to !_font-size: 2em_!.">
+				<![CDATA[font-size: 2em]]>
+	        </ExpectedCode>
+	        <Run success="Good job! You have customized the web page. Use the blue button below to open the web page in a real browser as well." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned about the basic structure of a website in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+    
+    
+    
+    
+    <Lesson
+        section="Use HTML to code web pages"
+	    title="Tags"
+		example="&lt;h1&gt;"
+		description="In this lesson you'll get to know HTML, the markup language for describing web pages.">
+
+	    <Exercise
+	        task="Press Run to view the website below. The website is described as HTML code, which a web browser can display as a document."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>$code_hint$
+  <body>$code_hint_2$
+
+    <h1>My first Heading</h1>$code_hint_3$
+
+    <p>This is a paragraph</p>$code_hint_4$
+	$code_hint_5$
+  </body>
+</html>$code_hint_1$			
+				]]>
+	        </SourceCode>
+	        <Run  success="Great! Below you can see how a web browser displays the HTML code as a web page. Let's continue." />
+	    </Exercise>
+	    <Exercise
+	        task="The blue arrow points to a HTML tag, which is a keyword surrounded by angle brackets. Press on the blue arrow, then continue."
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="HTML tags normally come in pairs like. The first tag in a pair is the opening tag, the second tag is the closing tag and is written with a slash. The whole text including both tags is called an element."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The text between the opening and closing !_body_! tags describes the visible page content. Each HTML tag describes different document content."
+	        level="1" >
+	        <CodeHint_2 />
+	    </Exercise>
+	    <Exercise
+	        task="The text between the !_h1_! tags describes a heading."
+	        level="1" >
+	        <CodeHint_3 />
+	    </Exercise>
+	    <Exercise
+	        task="The text between the !_p_! tags describes a paragraph."
+	        level="1" >
+	        <CodeHint_4 />
+	        <Run  success="As you see our web page has one header and one paragraph. Let's add more content next." />
+	    </Exercise>
+	    <Exercise
+	        task="Add a second paragraph with the the text '_This is another paragraph_'."
+	        level="4" >
+	        <CodeHint_5 />
+	        <ExpectedCode
+	            fail="Just add the code !_&lt;p&gt;This is another paragraph&lt;/p&gt;_!.">
+				<![CDATA[<p>This is another paragraph</p>]]>
+	        </ExpectedCode>
+	        <Run  success="Good job!" />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned HTML basics in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+    
+
+    
+
+    
+	<Lesson
+	    title="Text"
+		example="&lt;b&gt;Bold&lt;/b&gt;"
+		description="In this lesson you'll learn about text formatting tags.">
+
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<p>
+	  Some text. $code_hint$Some more text.
+	</p>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <Run  success="There's only a heading and some text yet. Let's continue." />
+	    </Exercise>
+	    <Exercise
+	        task="Add a !_br_! tag at the blue arrow to add a line break inside the text."
+	        level="4" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the tag !_&lt;br&gt;_! at the blue arrow.">
+				<![CDATA[<br>]]>
+	        </ExpectedCode>
+	        <Run  success="Awesome! You have added a line break inside the text. Let's add some formatted text next." />
+	    </Exercise>
+	    <Exercise
+	        task="Add opening and closing !_b_! tags at the blue arrow to define bold text."
+	        level="3" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<p>
+	  Some text.<br>
+	  Some more text.<br>
+	  $code_hint$
+	</p>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_&lt;b&gt;&lt;/b&gt;_! at the blue arrow.">
+				<![CDATA[<b></b>]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="Add the text '_Some bold text._' between the !_b_! tags."
+	        level="3" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<p>
+	  Some text.<br>
+	  Some more text.<br>
+	  <b>$code_hint$</b>
+	</p>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_&lt;b&gt;Some bold text.&lt;/b&gt;_! at the blue arrow.">
+				<![CDATA[<b>Some bold text.</b>]]>
+	        </ExpectedCode>
+	        <Run  success="Great! The !_b_! tag is used to define bold text." />
+	    </Exercise>
+	    <Exercise
+	        task="Now use an !_i_! tag to add the italic text '_Some italic text._'."
+	        level="4" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<p>
+	  Some text.<br>
+	  Some more text.<br>
+	  <b>Some bold text.</b><br>
+	  $code_hint$
+	</p>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_&lt;i&gt;Some italic text.&lt;/i&gt;_! at the blue arrow.">
+				<![CDATA[<i>Some italic text.</i>]]>
+	        </ExpectedCode>
+	        <Run  success="Awesome job!" />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned basic text formatting with HTML in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+    
+        
+        
+        
+        
+    <Lesson
+	    title="Images"
+		example="&lt;img src=&quot;myimage.png&quot;&gt;"
+		description="In this lesson you'll learn to include images in your web pages.">
+
+        <Files 
+	        template="simple_project"
+	        template2="simple_project_images"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="Press Run to view the website below. It contains an image."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<img$code_hint$ src="img/android.jpg$code_hint_1$">
+	$code_hint_2$
+	
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <Run  success="Great! Let's learn how images work in HTML." />
+	    </Exercise>
+	    <Exercise
+	        task="The !_img_! tag is used to include an image."
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The !_src_! attribute defines the image. Here the file !_img/android.jpg_! of this website project is used."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="Add a second image with the file !_img/html.jpg_!."
+	        level="4" >
+	        <CodeHint_2 />
+	        <ExpectedCode
+	            fail="Add the code !_&lt;img src=&quot;img/html.jpg&quot;&gt;_!.">
+				<![CDATA[<img src="img/html.jpg">]]>
+	        </ExpectedCode>
+	        <Run  success="Great!" />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned to include images in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+
+    
+    
+    
+	<Lesson
+	    title="Links"
+		example="&lt;a href=&quot;www.google.com&quot;&gt;...&lt;/a&gt;"
+		description="In this lesson you'll learn to include hyperlinks in your web pages.">
+
+	    <Files 
+	        template="simple_project"
+	        template2="simple_project_images"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="Press Run to view the website below. It contains a hyperlink that you can click on to open another web page."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<a$code_hint$ href="http://www.google.com$code_hint_1$">Google$code_hint_2$</a>
+    $code_hint_3$
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <Run  success="Great! Click on the '_Google_' link in this web page. Let's learn how links work in HTML." />
+	    </Exercise>
+	    <Exercise
+	        task="A hyperlink is defined with the !_a_! tag in HTML."
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The !_href_! attribute of the !_a_! tag specifies the destination web page of the link. Here it is '_http://www.google.com_'."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The text between the opening and closing !_a_! tags is shown in the web page."
+	        level="1" >
+	        <CodeHint_2 />
+	    </Exercise>
+	    <Exercise
+	        task="Add a second link to '_http://www.android.com_' with the the text '_Android_'."
+	        level="4" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="Add the link with the !_a_! tag !_&lt;a href=&quot;http://www.android.com&quot;&gt;&lt;/a&gt;_!.">
+				<![CDATA[<a href="http://www.android.com">]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Add the text '_Android_' between the opening and closing !_a_! tags.">
+				<![CDATA[<a href="http://www.android.com">Android</a>]]>
+	        </ExpectedCode>
+	        <Run  success="Awesome! Test your newly added hyperlink." />
+	    </Exercise>
+	    <Exercise
+	        task="To use an image as a link add an image with the file !_img/android.jpg_! inside the !_a_! tags."
+	        level="4" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<a href="http://www.android.com">
+	  $code_hint$
+	</a>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_&lt;img src=&quot;img/android.jpg&quot;&gt;_! at the blue arrow.">
+				<![CDATA[<img src="img/android.jpg">]]>
+	        </ExpectedCode>
+	        <Run  success="Great! Click on the image to follow the link." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned about links in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+    
+	
+	
+	
+	<Lesson
+	    title="Lists"
+		example="&lt;ul&gt;...&lt;/ul&gt;"
+		description="In this lesson you'll learn to include bullet lists in your web pages.">
+
+	    <Exercise
+	        task="Press Run to view the website below. It contains a list."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<ul>$code_hint$
+	  <li>Google</li>$code_hint_1$
+	  $code_hint_2$
+	</ul>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <Run  success="Great! There's only on list item in this bullet list yet. Let's add some more." />
+	    </Exercise>
+	    <Exercise
+	        task="The !_ul_! tag is used to define a list in HTML."
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="Each list item is defined with an !_li_! tag."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="Add a second list item with the text '_Android_'."
+	        level="4" >
+	        <CodeHint_2 />
+	        <ExpectedCode
+	            fail="Add the list item with !_&lt;li&gt;Android&lt;/li&gt;_!.">
+				<![CDATA[<li>Android</li>]]>
+	        </ExpectedCode>
+	        <Run  success="Awesome! You have added a second list item." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned about lists in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+
+	
+	
+	
+	<Lesson
+	    section="Use CSS to define the visual appearance of your web pages"
+	    title="CSS How To"
+		example="&lt;style&gt;...&lt;/style&gt;"
+		description="In this lesson you'll learn how to include CSS in your web page to define its visual styles.">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+        	<CodeFile name="styles.css" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1 style$code_hint$="color: Red$code_hint_1$;">My Website</h1>
+    
+    <p>A paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <Run  success="As you see this web page has a red heading. Let's see how this works." />
+	    </Exercise>
+	    <Exercise
+	        task="The !_h1_! tag has an inline !_style_! attribute which sets CSS styles."
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="Now change the CSS !_color_! style to !_Blue_!."
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Just change !_Red_! to !_Blue_!.">
+				<![CDATA[color: Blue]]>
+	        </ExpectedCode>
+	        <Run  success="Awesome! Now the heading is blue." />
+	    </Exercise>
+	    <Exercise
+	        task="Instead of a !_style_! attribute we use a !_style_! tag now, which can define styles for several tags of the web page."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+	<style$code_hint$>
+	  h1$code_hint_1$ { color: Blue$code_hint_2$; }
+	  $code_hint_3$
+	</style>
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+
+    <p>A paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="Our internal style sheet defines a rule set for !_h1_! tags."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The rule set sets the CSS !_color_! style to !_Blue_!."
+	        level="1" >
+	        <CodeHint_2 />
+	        <Run  success="Our heading is still blue." />
+	    </Exercise>
+	    <Exercise
+	        task="Now add a second rule set for !_p_! tags which sets the CSS !_color_! style to !_Green_!."
+	        level="4" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="Just add the CSS code !_p { color: Green; }_!.">
+				<![CDATA[p { color: Green; }]]>
+	        </ExpectedCode>
+	        <Run  success="Good job! The paragraph text is green now." />
+	    </Exercise>
+	    <Exercise
+	        task="Instead of defining a !_style_! tag directly inside the HTML page, we now use a !_link_! tag to link to the external CSS file !_styles.css_! for the styles."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css$code_hint$" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+
+    <p>A paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+h1 { color: Blue; }$code_hint$
+p { color: Green; }
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The CSS file !_styles.css_! contains the CSS rule sets for !_h1_! and !_p_!."
+	        code_file="styles.css"
+	        level="1" >
+	        <CodeHint />
+	        <Run  success="The styles from the linked CSS files are still applied when the web page is displayed." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned how to include CSS in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+		
+		
+
+	
+	<Lesson
+	    title="Class Selectors"
+		example="class=&quot;blue-text&quot;"
+		description="In this lesson you'll learn to use CSS class selectors to style HTML elements.">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+        	<CodeFile name="styles.css" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <p>A paragraph.<p>
+
+    <p>Another paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <Run  success="The web page has two paragraphs. Let's style them." />
+	    </Exercise>
+	    <Exercise
+	        task="In the CSS file we define a rule set for !_p_! tags which sets the !_color_! style to !_Blue_!."
+	        code_file="styles.css"
+	        level="1" >
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+p$code_hint$ { color: Blue; }
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <Run  success="Both paragraphs are now blue. Let's learn to define a different color for each paragraph next." />
+	    </Exercise>
+	    <Exercise
+	        task="Instead of using a tag selector we now define a class selector !_blue-text_!. A class selector starts with a dot."
+	        code_file="styles.css"
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <p class="blue-text"$code_hint$>A paragraph.<p>
+
+    <p$code_hint_1$>Another paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+.blue-text$code_hint$ { color: Blue; }
+
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="We set the class !_blue-text_! using a !_class_! attribute for the first !_p_! tag."
+	        level="1" >
+	        <CodeHint />
+	        <Run  success="Now only the first paragraph is blue because the CSS rule set only applies for HTML elements with the class !_blue-text_!. Let's make the second paragraph green." />
+	    </Exercise>
+	    <Exercise
+	        task="Add a CSS rule set for the class !_green-text_! which sets the !_color_! style to !_Green_!."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Just add the CSS code !_.green-text { color: Green; }_!.">
+				<![CDATA[.green-text { color: Green; }]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="Set the class !_green-text_! for the second paragraph."
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Add attribute !_class=&quot;green-text&quot;_! at the blue arrow.">
+				<![CDATA[class="green-text"]]>
+	        </ExpectedCode>
+	        <Run  success="Awesome! You have styled the second paragraph." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned to use CSS class selectors in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+		
+		
+				
+	<Lesson
+	    title="Text Style"
+		example="font-size: 2em;"
+		description="In this lesson you'll learn to define text styles.">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+        	<CodeFile name="styles.css" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisici elit, 
+      sed eiusmod tempor incidunt ut labore et dolore magna 
+      aliqua. Ut enim ad minim veniam, quis nostrud 
+      exercitation ullamco laboris nisi ut aliquid ex ea 
+      commodi consequat. Quis aute iure reprehenderit in 
+      voluptate velit esse cillum dolore eu fugiat nulla 
+      pariatur. Excepteur sint obcaecat cupiditat non proident, 
+      sunt in culpa qui officia deserunt mollit anim id est 
+      laborum.
+    <p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+p {
+  $code_hint$
+}
+				]]>
+	        </SourceCode>
+	        <Run  success="Let's change the visual style of the text." />
+	    </Exercise>
+	    <Exercise
+	        task="Set the !_color_! style to !_Green_!."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the CSS style !_color: green;_!.">
+				<![CDATA[color: Green;]]>
+	        </ExpectedCode>
+	        <Run  success="Great! Let's change the text alignment next." />
+	    </Exercise>
+	    <Exercise
+	        task="Set the !_text-align_! style to !_center_!."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the CSS style !_text-align: center;_!.">
+				<![CDATA[text-align: center;]]>
+	        </ExpectedCode>
+	        <Run  success="Good job! Let's change the text decoration next." />
+	    </Exercise>
+	    <Exercise
+	        task="Set the !_text-decoration_! style to !_underline_!."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the CSS style !_text-decoration: underline;_!.">
+				<![CDATA[text-decoration: underline;]]>
+	        </ExpectedCode>
+	        <Run  success="Awesome! Let's change the font size next." />
+	    </Exercise>
+	    <Exercise
+	        task="Set the !_font-size_! style to !_2em_!."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the CSS style !_font-size: 2em;_!.">
+				<![CDATA[font-size: 2em;]]>
+	        </ExpectedCode>
+	        <Run  success="Perfect! Let's change the font style as well." />
+	    </Exercise>
+	    <Exercise
+	        task="Set the !_font-style_! style to !_italic_!."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the CSS style !_font-style: italic;_!.">
+				<![CDATA[font-style: italic;]]>
+	        </ExpectedCode>
+	        <Run  success="Good job! You have changed the text style by setting different CSS styles." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned about CSS text styles in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+		
+		
+	
+	<Lesson
+	    section="Use JavaScript and DOM maninpulation to code the dynamic behavior of your web pages"
+	    title="JavaScript How To"
+		example="&lt;script&gt;...&lt;/script&gt;"
+		description="In this lesson you'll learn how to include JavaScript in your web page to code its dynamic behavior.">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <script>$code_hint$
+      alert$code_hint_1$("Hello from JavaScript!"$code_hint_2$);
+    </script>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <Run  success="The web page opens an alert dialog with a message. Let's learn how to do this." />
+	    </Exercise>
+	    <Exercise
+	        task="The HTML code contains a !_script_! tag which defines JavaScript code that is executed when the web page is loaded."
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The code calls the built-in JavaScript function !_alert_! which opens the dialog."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="Change the message of the dialog to something else."
+	        level="3" >
+	        <CodeHint_2 />
+	        <Run  success="Good job!" />
+	    </Exercise>
+	    <Exercise
+	        task="We now use a !_src_! atribute in the !_script_! tag to include the external JavaScript file !_scripts.js_! instead of including the JavaScript code directly in HTML."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <script src="js/scripts.js$code_hint$"></script>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+alert("Hello from JavaScript!");$code_hint$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The JavaScript file !_scripts.js_! contains the !_alert_! function call."
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint />
+	        <Run  success="As you see the external JavaScript code is still executed when the page is displayed." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned how to include JavaScript in your web page in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+
+	
+	
+	
+	<Lesson
+	    title="Events"
+		example="onclick=&quot;showDialog()&quot;"
+		description="In this lesson you'll learn to react to user events in your web page.">
+
+	    <Files 
+	        template="simple_project"
+	        template2="simple_project_images"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <img src="img/android.jpg"$code_hint$>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <Run  success="The web page contains an image. Let's implement an action when it is clicked." />
+	    </Exercise>
+	    <Exercise
+	        task="Add an attribute !_onclick=&quot;alert('Android')&quot;_! to the !_img_! tag. The !_onclick_! attribute defines JavaScript that is executed when the element is clicked."
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_onclick=&quot;alert('Android')&quot;_! at the blue arrow.">
+				<![CDATA[onclick="alert('Android')"]]>
+	        </ExpectedCode>
+	        <Run  success="Good job! Now tap on the image." />
+	    </Exercise>
+	    <Exercise
+	        task="Change the !_alert('Android')_! call to !_showDialog()_! to call your own JavaScript function."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <img src="img/android.jpg" onclick="alert('Android')$code_hint$">
+    
+    <script src="js/scripts.js$code_hint_1$"></script>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+$code_hint$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_onclick=&quot;showDialog()&quot;_! at the blue arrow.">
+				<![CDATA[onclick="showDialog()"]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="We use a !_script_! tag to include JavaScript code from the !_scripts.js_! file."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="In the !_scripts.js_! file add the JavaScript fucntion !_showDialog_!."
+	        code_file="scripts.js"
+	        level="4" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_function showDialog() {}_! at the blue arrow.">
+				<![CDATA[function showDialog()]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="Add a method call !_alert(&quot;Android&quot;)_! inside the !_showDialog_! function."
+	        code_file="scripts.js"
+	        level="3" >
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+function showDialog() {
+	$code_hint$
+}
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_alert(&quot;Android&quot;)_! at the blue arrow.">
+				<![CDATA[alert(]]>
+	        </ExpectedCode>
+	        <Run  success="Great! If you tap on the image now the !_showDialog_! function is called and shows the dialog." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned to react to events with JavaScript in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+		
+	
+	
+	
+	
+	<Lesson
+	    title="DOM"
+		example="document.getElementById(&quot;id&quot;)"
+		description="In this lesson you'll learn to access HTML elements from JavaScript.">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+
+    <p id="time"$code_hint$>Time</p>
+
+	<script src="js/scripts.js$code_hint_1$"></script>
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+$code_hint$
+				]]>
+	        </SourceCode>	
+	        <Run  success="Let's make the web page show the current time from JavaScript." />
+	    </Exercise>
+	    <Exercise
+	        task="The !_p_! element has an !_id_! attribute !_time_!. The id makes it easy to access and manipulate the element from JavaScript code later."
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The HTML code uses a !_script_! tag to include the JavaScript file !_scripts.js_!."
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="Add the JavaScript code !_var timeElement = document.getElementById(&quot;time&quot;);_! to access the HTML element in the document object model (DOM)."
+	        code_file="scripts.js"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_var timeElement = document.getElementById(&quot;time&quot;);_! at the blue arrow.">
+				<![CDATA[var timeElement = document.getElementById("time")]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="Now use the code !_timeElement.innerHTML = new Date();_! to actually change the HTML element to show the current date and time."
+	        code_file="scripts.js"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add the code !_timeElement.innerHTML = new Date();_! at the blue arrow.">
+				<![CDATA[timeElement.innerHTML = new Date()]]>
+	        </ExpectedCode>
+	        <Run  success="Awesome! The JavaScript code changes the paragraph to show the current date and time now." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned to access HTML elements from the JavaScript DOM in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+
+	
+	
+	
+	<Lesson
+	    title="Interaction"
+		example="onclick=&quot;toggleImage()&quot;"
+		description="In this lesson you'll learn to use events and DOM manipulation to react to user interaction.">
+
+	    <Files 
+	        template="simple_project"
+	        template2="simple_project_images"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="Press Run to view the website below."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+
+    <img src="img/android1.png"$code_hint$>
+
+	<script src="js/scripts.js$code_hint_1$"></script>
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+function toggleImage() {$code_hint$
+	$code_hint_1$
+}
+				]]>
+	        </SourceCode>	
+	        <Run  success="Let's change the image when the user clicks on it." />
+	    </Exercise>
+	    <Exercise
+	        task="Set the !_id_! of the !_img_! element to !_myImage_!."
+	        code_file="index.html"
+	        level="4" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add attribute !_id=&quot;myImage&quot;_! at the blue arrow.">
+				<![CDATA[id="myImage"]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="Add an !_onclick_! event handler which calls the function !_toggleImage()_!."
+	        code_file="index.html"
+	        level="4" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add attribute !_onclick=&quot;toggleImage()&quot;_! at the blue arrow.">
+				<![CDATA[onclick="toggleImage()"]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="The HTML code uses a !_script_! tag to include the JavaScript file !_scripts.js_!."
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="We have already added the event handler function !_toggleImage_!."
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="Now add the code !_var image = document.getElementById(&quot;myImage&quot;);_! to access the HTML image element."
+	        code_file="scripts.js"
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Add the code !_var image = document.getElementById(&quot;myImage&quot;);_! at the blue arrow.">
+				<![CDATA[var image = document.getElementById("myImage")]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="We have added an if statetment which toggles the !_src_! attribute of the HTML image element."
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint />
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+function toggleImage() {
+    var image = document.getElementById("myImage");
+    
+    if (image.src.match("android1")) {
+        image.src$code_hint$ = "img/android2.png";
+    } else {
+        image.src = "img/android1.png";
+    }
+}
+				]]>
+	        </SourceCode>	
+	        <Run  success="Awesome! Now click on the image and see what happens." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned to implement user interaction inside the web page in this lesson! Now play with the code a bit on your own. Change the text which is shown and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>	
+</Course>

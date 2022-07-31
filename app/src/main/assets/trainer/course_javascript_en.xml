@@ -1,0 +1,2049 @@
+<Course
+    release_date="2014-10-01"
+    icon="ic_launcher_javascript"
+	title="JavaScript Skills"
+    full_title="JavaScript programming skills"  
+	code_section="Code your own JavaScript programs and sharpen your programming skills"
+	code_template="Start with this empty project template to create your own program.">
+	
+    <Files 
+        template="simple_project"
+        project_name="My JavaScript Application">
+    	<CodeFile name="main.js" />    
+    </Files>
+    
+
+	<Lesson
+    	section="Start from here to learn JavaScript programming! In these interactive lessons you will step-by-step learn JavaScript programming skills."
+	    title="Hello World"
+		example="console.log(&quot;Hello World&quot;)&#59;"
+		description="In this lesson you'll learn to run your first JavaScript program.">
+
+	    <Exercise
+	        task="Press Run to run the JavaScript program below."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log("Hello$code_hint$ World");
+				]]>
+	        </SourceCode>
+	        <Run  success="Great, you've just run your first program! It prints '_Hello World_'. You can see the output below. Let's continue." />
+	    </Exercise>
+	    <Exercise
+	        task="Now modify the !_log_! statement at the blue arrow in the program below to print '_Hi World_'. Then run."
+	        level="5" >
+	        <ExpectedOutput
+	            fail="Well, your program doesn't print '_Hi World_'. Check the output below."
+	            hint="Hint: Just change '_Hello World_' to '_Hi World_' between the quotes in the !_log_! statement." >
+				<![CDATA[Hi World]]>
+	        </ExpectedOutput>
+	        <CodeHint />
+	        <Run success="Awesome! You have changed the program output to '_Hi World_'." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've finished the first JavaScript programming lesson! Now play with the code a bit on your own. Change the text which the program prints and run it as often as you like. Then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+	
+	
+	
+	
+	<Lesson
+	    title="Program Structure"
+		example="console.log(&quot;Hello World&quot;)&#59;"
+		description="In this lesson you'll learn about the general structure of a JavaScript program, how a program executes statements and how to fix syntax errors.">
+
+        <Exercise
+	        task="Check out the most simple JavaScript program below, which only has a single statement at the blue arrow. Read the code at the blue arrow, then continue."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log("JavaScript");$code_hint$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <Run success="When you run the program it executes the statement which prints '_JavaScript_'. Check the output below." />
+	    </Exercise>
+        <Exercise
+	        task="We have added a second !_log_! statement which is executed after the first one. Read the code at the blue arrow, then run."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log("JavaScript");
+console.log("is");$code_hint$
+$space$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <Run
+	        	success="Each !_log_! statement is executed and prints text in a line." />
+	    </Exercise>
+	    <Exercise
+	        task="We have removed the !_&#59;_! after the second statement. The yellow squiggly underline shows this as a warning. Read the code at the blue arrow, then run."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log("JavaScript");
+console.log("is")$code_hint$
+$space$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <Run
+	        	success="The program still runs even with the warning." />
+	    </Exercise>
+	    <Exercise
+	        task="Now fix the missing !_)_! error at the red squiggly underline that we've introduced into the program. Such real syntactic errors prevent the JavaScript program from running correctly."
+	        level="4" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log("JavaScript");
+console.log("is"$code_hint$
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <Run
+	        	success="Well done, you've fixed the program!" />
+	    </Exercise>
+	    <Exercise
+	        task="Add a third !_log_! statement that prints '_cool_' below '_JavaScript_' and '_is_'. Hint: Just type !_con_! and use code completion." 
+	        level="4">
+	        <ExpectedOutput
+	            fail="Not quite. You want the program to output three lines with '_JavaScript_', '_is_', '_cool_'."
+	        	hint="Hint: Just add another !_log_! statement that prints '_cool_' below the other !_log_! statements." >
+	            <![CDATA[
+JavaScript
+is
+cool
+				]]>
+	        </ExpectedOutput>
+	        <CodeHint_1 />
+	        <Run success="Good job! As you can see all statements are executed one after the other." />	            
+	    </Exercise>
+        <Exercise
+	        task="We've added a code comment in the program, which starts with two slashes and is shown in green. The comment only contains explanations but is not executed. Read the code at the blue arrow, then continue."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log("JavaScript");
+console.log("is");
+console.log("cool");
+// this is a comment $code_hint$
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+		<Exercise
+	        task="Now add a second comment !_// TODO_! at the blue arrow in the program."
+	        level="3" >
+	        <ExpectedCode
+	            fail="Add !_// TODO_! in a separate line somewhere in the program.">
+				<![CDATA[// TODO]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Don't change the program output, just add the comment.">
+	            <![CDATA[
+JavaScript
+is
+cool
+	            ]]>
+	        </ExpectedOutput>
+	        <CodeHint_1 />
+	        <Run
+	        	success="Good job! As you can see the comments do nothing." />
+	    </Exercise>
+		<Exercise
+	        task="Congratulations! You've mastered the JavaScript program structure lesson. Now you can play with the code on your own. Add some more !_log_! statements and run. Then continue with the next lesson." >
+		</Exercise>
+	</Lesson>
+
+	
+	
+	
+	<Lesson
+        section="Continue with programming basics"
+        title="Data Types"
+		example="&quot;Hello&quot; &nbsp;&nbsp;10 &nbsp;&nbsp;3.1415 &nbsp;&nbsp;true"
+		description="In this lesson you'll learn about different types of data: strings, numbers and boolean values.">
+
+		<Exercise
+	        task="Check out the program below. It prints the text '_hello_'." 
+	        level="1" >
+			<SourceCode>
+	            <![CDATA[
+$space$
+console.log("hello"$code_hint$);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[
+hello
+				]]>
+	        </ExpectedOutput>
+	        <Run success="The text '_hello_' is printed as expected. Now let's print a number as well." />
+	    </Exercise>
+		<Exercise
+	        task="We've added a second !_log_! statement which prints the number !_10_!. Numbers are written without quotation marks, while text is surrounded with quotation marks - in JavaScript a text is called a string (of characters)." 
+	        level="1" >
+			<SourceCode>
+	            <![CDATA[
+$space$
+console.log("hello");
+console.log(10$code_hint$);
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[
+hello
+10
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Now both the text and the number are printed." />
+	    </Exercise>
+	    <Exercise
+	        task="Extend the program to print the number !_20_! on another line." 
+	        level="2"  >
+	        <CodeHint_1 />
+			<ExpectedCode
+	            fail="Print the number !_20_! (without quotes).">
+				<![CDATA[console.log(20)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that output isn't right.">
+	            <![CDATA[
+hello
+10
+20
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Perfect. In addition to integer numbers JavaScript also supports floating point numbers." />
+	    </Exercise>
+	    <Exercise
+	        task="Print the number !_3.1415_! in another line." 
+	        level="3"  >
+	        <CodeHint_1 />
+			<ExpectedCode
+	            fail="Print the number !_3.1415_! (without quotes).">
+				<![CDATA[console.log(3.1415)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that output isn't right.">
+	            <![CDATA[
+hello
+10
+20
+3.1415
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Great. You have learned about strings, integer and floating point numbers. There's also a boolean data type." />
+	    </Exercise>
+		<Exercise
+	        task="We've added a !_log_! statement which prints the boolean value !_true_!. A boolean value can be either !_true_! or !_false_!." 
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log("hello");
+console.log(10);
+console.log(20);
+console.log(3.1415);
+console.log(true$code_hint$);
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[
+hello
+10
+20
+3.1415
+true	            
+				]]>
+	        </ExpectedOutput>
+	        <Run success="The program now also prints !_true_!." />
+	    </Exercise>
+	    <Exercise
+	        task="Make the program print the boolean value !_false_! as well." 
+	        level="3"  >
+	        <CodeHint_1 />
+			<ExpectedCode
+	            fail="Print the boolean value !_false_!.">
+				<![CDATA[console.log(false)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that output isn't right.">
+	            <![CDATA[
+hello
+10
+20
+3.1415
+true
+false	            
+	            ]]>
+	        </ExpectedOutput>
+	        <Run success="Good job!" />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations, you've learned a bit about data types in this lesson! Play a bit more with the code. Then continue with the lesson about operators.">
+	    </Exercise>
+	</Lesson>
+	
+	
+	
+	
+    <Lesson
+        title="Operators"
+		example="10 + 20"
+		description="In this lesson you'll learn how to perform calculations on data using operators.">
+
+		<Exercise
+	        task="Check out this program which uses the !_+_! operator to calculate !_10 + 20_!." 
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log(10 + 20$code_hint$);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[30]]>
+	        </ExpectedOutput>
+	        <Run success="The program calculates and prints the result of !_10 + 20_!." />
+	    </Exercise>
+		<Exercise
+	        task="Now make the program calculate and print !_100 + 40_!." 
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log($code_hint$);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Let the program calculate !_100 + 40_! and print the result with a !_log_! statement.">
+				<![CDATA[console.log(100+40)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's not !_100 + 40_!.">
+	            <![CDATA[140]]>
+	        </ExpectedOutput>
+	        <Run success="Correct! Let's learn the other arithmetic operators: the addition operator !_+_!, the subtraction operator !_-_!, the multiplication operator !_*_!, the division operator !_/_! and the remainder operator !_%_!." />
+	    </Exercise>
+	    <Exercise
+	        task="Print !_100 - 40_!."
+	        level="2">
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Let the program calculate !_100 - 40_! and print the result.">
+				<![CDATA[console.log(100-40)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's not !_100 - 40_!.">
+	            <![CDATA[60]]>
+	        </ExpectedOutput>
+	        <Run success="Correct!" />
+	    </Exercise>
+	    <Exercise
+	        task="Print !_100 * 40_!."
+	        level="2">
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Let the program calculate !_100 * 40_! and print the result.">
+				<![CDATA[console.log(100*40)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's not !_100_! times !_40_!.">
+	            <![CDATA[4000]]>
+	        </ExpectedOutput>
+	        <Run success="Correct!" />
+		</Exercise>
+	    <Exercise
+	        task="Print !_100 / 40_!."
+	        level="2">
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Let the program calculate !_100 / 40_! and print the result.">
+				<![CDATA[console.log(100/40)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's not !_100_! divided by !_40_!.">
+	            <![CDATA[2.5]]>
+	        </ExpectedOutput>
+	        <Run success="Correct!" />
+		</Exercise>
+	    <Exercise
+	        task="Check out this program which uses the string concatenation operator which is also !_+_! in JavaScript. If one operand of the !_+_! operator is a string the result will be the concatenation of the string representation of both operands."
+	        level="1">
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log("Result: " + 10$code_hint$);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[Result: 10]]>
+	        </ExpectedOutput>
+	        <Run success="The output is a string combined from '_Result:_' and !_10_!." />
+		</Exercise>
+	    <Exercise
+	        task="Now use the string concatenation operator to print '_Pi=3.1415_' where !_3.1415_! is given as a number."
+	        level="4">
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log($code_hint$);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Use the string concatenation operator to print !_&quot;Pi=&quot;+3.1415_!.">
+				<![CDATA[console.log("Pi="+3.1415)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="You should print !_Pi=3.1415_!."
+	            hint="Hint: !_3.1415_! should be printed as a number without quotes.">
+	            <![CDATA[Pi=3.1415]]>
+	        </ExpectedOutput>
+	        <Run success="Good job!" />
+		</Exercise>
+		<Exercise
+		    task="Congratulations! You have learned how to use operators. Try some more calculations on your own now. Then learn about relational operators in the next lesson.">
+		</Exercise>
+	</Lesson>
+
+
+
+
+
+    <Lesson
+        title="Relational Operators"
+		example="10 &lt; 20"
+		description="In this lesson you'll learn to use relational and equality operators to compare data.">
+
+		<Exercise
+	        task="Check out the JavaScript program below. It checks whether !_10_! is less than !_20_! and prints the result."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log(10 < 20$code_hint$);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+				<![CDATA[true]]>
+	        </ExpectedOutput>
+	        <Run success="The result of the comparison is a boolean value which is either !_true_! or !_false_!." />
+	    </Exercise>
+		<Exercise
+	        task="Now compare whether !_10_! is greater than !_20_! and print the result."
+	        level="2" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log($code_hint$);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Use the !_&gt;_! operator.">
+				<![CDATA[console.log(10 > 20)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's wrong.">
+				<![CDATA[false]]>
+	        </ExpectedOutput>
+	        <Run success="Correct!" />
+	    </Exercise>
+		<Exercise
+	        task="Compare whether !_10_! is equal to !_20_! and print the result. Use the equality operator !_==_!."
+	        level="2" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Use the !_==_! operator.">
+				<![CDATA[console.log(10 == 20)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's wrong.">
+				<![CDATA[false]]>
+	        </ExpectedOutput>
+	        <Run success="Correct!" />
+	    </Exercise>
+		<Exercise
+	        task="Compare whether !_10_! is not equal to !_20_! and print the result. Use the inequality operator !_!=_!."
+	        level="2" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Use the !_!=_! operator.">
+				<![CDATA[console.log(10 != 20)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's wrong.">
+				<![CDATA[true]]>
+	        </ExpectedOutput>
+	        <Run success="Correct!" />
+		</Exercise>
+		<Exercise
+	        task="Compare whether !_10_! is less than or equal to !_20_!. Use the !_&lt; =_! operator."
+	        level="2" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Use the !_&lt; =_! operator.">
+				<![CDATA[console.log(10 <= 20)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's wrong.">
+				<![CDATA[true]]>
+	        </ExpectedOutput>
+	        <Run success="Correct!" />
+		</Exercise>
+		<Exercise
+	        task="Compare whether !_10_! is greater than or equal to !_20_!. Use the !_&gt; =_! operator."
+	        level="2" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Use the !_&gt; =_! operator.">
+				<![CDATA[console.log(10 >= 20)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's wrong.">
+				<![CDATA[false]]>
+	        </ExpectedOutput>
+	        <Run success="Correct! You know the equality and relational operators now. Let's mix it up." />
+		</Exercise>
+		<Exercise
+	        task="Compare whether !_123_! plus !_456_! is less than !_987_! minus !_654_!."
+	        level="4" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log($code_hint$);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Use a combination of !_+_!, !_-_! and !_&#60; _! operators.">
+				<![CDATA[console.log(123 + 456 < 987 - 654)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="No, that's wrong.">
+				<![CDATA[false]]>
+	        </ExpectedOutput>
+	        <Run success="Awesome! You've learned how to combine numeric and relational operators in JavaScript." />
+		</Exercise>
+		<Exercise
+		    task="Congratulations! You've finished the relational operators lesson. Now try some more comparisons on your own. Then continue.">
+		</Exercise>
+	</Lesson>
+
+
+
+
+    <Lesson
+        section="Use variables to store and manipulate data"
+        title="Variables"
+		example="var i = 10&#59;"
+		description="In this lesson you'll learn how programs can store data in variables.">
+
+	    <Exercise
+	        task="Check out the JavaScript program below. It declares a variable !_i_! with value !_10_! and prints the value of this variable."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var i = 10;$code_hint$
+console.log(i);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+				<![CDATA[10]]>
+	        </ExpectedOutput>
+	        <Run success="As you can see variables can hold values which can be accessed later." />
+	    </Exercise>
+     	<Exercise
+	        task="Change the initial value of the variable !_i_! so that the program prints !_20_!."
+	        level="2" >
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="No, that's not !_20_!."
+	            hint="Hint: Change the variable declaration to !_int i = 20_!." >
+				<![CDATA[20]]>
+	        </ExpectedOutput>
+	        <ExpectedCode
+	            fail="Print variable !_i_! with a !_log_! statement.">
+				<![CDATA[console.log(i)]]>
+	        </ExpectedCode>
+	        <Run success="Perfect!" />
+	    </Exercise>
+	    <Exercise
+	        task="Check out this program. We've added variables !_j_! and !_k_!. The value of !_k_! is computed from the sum of !_i_! and !_j_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var i = 20;$code_hint_2$
+console.log(i);
+var j = 10;
+console.log(j);
+var k = i + j;$code_hint$
+console.log(k);
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+				<![CDATA[
+20
+10
+30
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="The program prints the result of the addition of !_i_! and !_j_!." />
+	    </Exercise>
+	    <Exercise
+	        task="Now declare a variable !_x_! initalized with the product of !_i_! and !_j_! and print the result."
+	        level="3" >
+	        <ExpectedOutput
+	            fail="No, that's wrong..">
+				<![CDATA[
+20
+10
+30
+200
+				]]>
+	        </ExpectedOutput>
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Assign !_i * j_! to a new variable !_x_!.">
+				<![CDATA[x = i * j]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Print variable !_x_! with a !_log_! statement.">
+				<![CDATA[console.log(x)]]>
+	        </ExpectedCode>
+	        <Run success="Very good!" />
+	    </Exercise>
+	    <Exercise
+	        task="Change the initial value of variable !_i_! to !_500_!."
+	        level="2" >
+	        <CodeHint_2 />
+	        <ExpectedOutput
+	            fail="No, that's wrong. Change !_i_! to !_500_!.">
+				<![CDATA[
+500
+10
+510
+5000
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Great! You can see how powerful variables are." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! Play with the code a bit more on your own now. Then continue and learn how a variable value can also be changed at any time during program execution.">
+	    </Exercise>
+	</Lesson>
+
+    
+    
+    
+    <Lesson
+        title="Variable Modification"
+		example="i++&#59;"
+		description="In this lesson you'll learn how to manipulate data in variables.">
+    
+	    <Exercise
+	        task="Check out the JavaScript program below. It changes the value of variable !_i_! during it's execution."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var i = 1;
+console.log(i);
+i = 2;$code_hint$
+console.log(i);
+$code_hint_1$
+				]]>
+	        </SourceCode>
+			<CodeHint />	        
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+				<![CDATA[
+1
+2
+				]]>
+	        </ExpectedOutput>
+	        <Run success="The !_log_! statements print the current actual value of !_i_! at the time they are executed." />
+	    </Exercise>
+	    <Exercise
+	        task="Now change the value of variable !_i_! to !_3_! after the existing code and print it as well."
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedOutput
+	            fail="The output should be !_1_!, !_2_!, !_3_!.">
+				<![CDATA[
+1
+2
+3
+				]]>
+	        </ExpectedOutput>
+	        <ExpectedCode
+	            fail="Assign value !_3_! to !_i_!.">
+				<![CDATA[i = 3]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            count="3"
+	            fail="Print variable !_i_! three times." >
+				<![CDATA[console.log(i)]]>
+	        </ExpectedCode>
+	        <Run success="Good job. Let's mix it up." />
+	    </Exercise>
+	    <Exercise
+	        task="Check out this program which increases the value of !_i_! by !_1_! by using an addition."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var i = 1;$code_hint_2$
+console.log(i);
+i = i + 1;$code_hint$
+console.log(i);
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+				<![CDATA[
+1
+2
+				]]>
+	        </ExpectedOutput>
+	        <Run success="The statement !_i = i + 1_! first calculates !_i + 1_! and then assigns the result back to !_i_!. Thus it increases i by !_1_!." />
+	    </Exercise>
+	    <Exercise
+	        task="Now increase the value of !_i_! by !_1_! the same way again and print it."
+	        level="4" >
+	        <CodeHint_1 />
+	        <ExpectedOutput
+	            fail="The output should be !_1_!, !_2_!, !_3_!.">
+				<![CDATA[
+1
+2
+3
+				]]>
+	        </ExpectedOutput>
+	        <ExpectedCode
+	            count="3"
+	            fail="Print variable !_i_! three times." >
+				<![CDATA[console.log(i)]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            count="2"
+	            fail="Increase !_i_! by !_1_! by using the !_+_! operator and assigning the value back." >
+				<![CDATA[i = i + 1]]>
+	        </ExpectedCode>
+	        <Run success="Good job." />
+	    </Exercise>
+	    <Exercise
+	        task="Change the initial value of !_i_! so that the program prints !_10_!, !_11_!, !_12_!."
+	        level="4" >
+	        <CodeHint_2 />
+	        <ExpectedOutput
+	            fail="The output should be !_10_!, !_11_!, !_12_!.">
+				<![CDATA[
+10
+11
+12
+				]]>
+	        </ExpectedOutput>
+	        <ExpectedCode
+	            count="3"
+	            fail="Print variable !_i_! three times." >
+				<![CDATA[console.log(i)]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            count="2"
+	            fail="Increase !_i_! by !_1_! by using the !_+_! operator and assigning the value back." >
+				<![CDATA[i = i + 1]]>
+	        </ExpectedCode>
+	        <Run success="Great. Since increasing a variable by !_1_! is required often there is a shortcut for it." />
+	    </Exercise>
+	    <Exercise
+	        task="Check out this program. It uses the !_++_! operator to increase !_i_! by !_1_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var i = 10;
+console.log(i);
+i++;$code_hint$
+console.log(i);
+i++;
+console.log(i);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+				<![CDATA[
+10
+11
+12
+				]]>
+	        </ExpectedOutput>
+	        <Run success="The !_++_! operator increases the value of the variable. There's also a !_--_! operator." />
+	    </Exercise>
+	    <Exercise
+	        task="Change the !_++_! operators to !_--_! operators and see what happens."
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="No, that's wrong.">
+				<![CDATA[
+10
+9
+8
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Awesome! The !_--_! operator decreases the variable value." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! Play with the code a bit more on your own now. Then continue with the next lesson.">
+	    </Exercise>
+	</Lesson>
+
+
+
+
+
+	<Lesson
+		section="Use control flow statements to control what your program does"
+        title="If Statements"
+		example="if (i &lt; 10) {}"
+		description="In this lesson you'll learn how to use the if statement, which allows to execute a certain section of code only if a particular condition is true.">
+
+	    <Exercise
+	        task="Check out this if statement. The body of the statement is only executed if the condition is true. Guess what the program prints?"
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var i = 5;$code_hint_2$
+if (i < 10)$code_hint$
+{
+	console.log("i is less than 10");
+}
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[
+i is less than 10
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="It prints '_i is less than 10_'. The !_log_! statement is executed because the condition is true." />
+	    </Exercise>
+	    <Exercise
+	        task="Now add a second if statement that prints '_i is greater than 0_' if !_i_! is greater than !_0_!."
+	        level="2">
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Add !_if (i > 0)_!.">
+	            <![CDATA[if (i > 0)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="That's not the expected output.">
+	            <![CDATA[
+i is less than 10
+i is greater than 0
+	            ]]>
+	        </ExpectedOutput>
+	        <Run success="Good job."/>
+	    </Exercise>
+	    <Exercise
+	        task="Now change the initial value of !_i_! to !_100_!."
+	        level="2">
+	        <CodeHint_2 />
+	        <ExpectedCode
+	            fail="Set !_i_! to !_100_!.">
+	            <![CDATA[i = 100]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="That's not the expected output.">
+	            <![CDATA[
+i is greater than 0
+	            ]]>
+	        </ExpectedOutput>
+	        <Run success="Awesome. As you can see the first !_log_! statement is no longer executed because the condition is false now. Let's mix it up."/>
+	    </Exercise>
+	    <Exercise
+	        task="Add an if statement to print '_i is even_' if variable !_i_! is even. Use the remainder operator !_i % 2_! in the condition."
+	        level="4" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Add !_if (i % 2 == 0)_! to check if !_i_! is even.">
+	            <![CDATA[if (i % 2 == 0]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Print '_i is even_' if the if condition is true.">
+	            <![CDATA[console.log("i is even")]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The program should output '_i is even_'.">
+	            <![CDATA[
+i is greater than 0
+i is even
+	            ]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome! " />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! You've mastered the if statement. You can try a few more if statements now. Then continue to learn about the if-else statement.">
+	    </Exercise>
+	</Lesson>
+	
+	
+	
+	
+	<Lesson
+	    title="If-Else Statements"
+		example="if (i &lt; 10) {} else {}"
+		description="In this lesson you'll learn how to use if-else statements." >
+	    
+	    <Exercise
+	        task="Check out the if-else statement below. If the condition is not true the else part is executed. Guess what the program prints?"
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var a = 2000;
+var b = 1000;
+if (a < b)
+{
+	console.log("a is less than b");
+}
+else$code_hint$
+{
+	console.log("a is not less than b");
+}
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[a is not less than b]]>
+	        </ExpectedOutput>
+	        <Run  success="The else part is executed because !_a_! is not less than !_b_! and the program prints '_a is not less than b_'." />
+	    </Exercise>
+	    <Exercise
+	        task="Now use the if-else statement to find the minimum of !_a_! and !_b_! and assign it to variable !_min_!."
+	        level="4" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var a = 2000;$code_hint_2$
+var b = 1000;
+var min;
+if (a < b)
+{
+	// TODO: assign min
+	$code_hint$
+}
+else
+{
+	// TODO: assign min
+	
+}
+console.log("The minimum of a and b is: " + min);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="If !_a_! is smaller than !_b_! then assign !_a_! to !_min_!.">
+	            <![CDATA[min = a]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="If !_a_! is not smaller than !_b_! then assign !_b_! to !_min_! in the else part.">
+	            <![CDATA[min = b]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's not the correct output.">
+	            <![CDATA[The minimum of a and b is: 1000]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome!" />
+	    </Exercise>
+	    <Exercise
+	        task="Change the initial value of !_a_! to !_100_!."
+	        level="2" >
+	        <CodeHint_2 />
+	        <ExpectedCode
+	            fail="Initialize !_a_! with !_100_!.">
+	            <![CDATA[a = 100]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well, that's not the correct output.">
+	            <![CDATA[The minimum of a and b is: 100]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome!" />
+	    </Exercise>
+	    <Exercise 
+	        task="Congratulations! You've learned how to use the if-else statement in this lesson. Play a bit more with the code now. Then continue with the next lesson.">
+	    </Exercise>
+	</Lesson>
+	
+	
+	
+	
+	
+    <Lesson
+        title="While Loops"
+		example="while (i &lt; 10) i++&#59;"
+		description="In this lesson you'll learn how while loops allow to continually execute statements while a particular condition is true.">
+
+	    <Exercise
+	        task="Check out this while loop. The loop is executed as long as !_i_! is less than or equal to !_5_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var i = 0;$code_hint_2$
+while (i <= 5$code_hint$)
+{
+	console.log(i);$code_hint_1$
+	i++;$code_hint_3$
+}
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="In each loop iteration the statements in the body first print !_i_! and then increase it by 1. Guess what the program prints?"
+	        level="1" >
+	        <CodeHint_1 />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[
+0
+1
+2
+3
+4
+5
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="The program prints the numbers from !_0_! to !_5_!." />
+	    </Exercise>
+	    <Exercise
+	        task="Now make the program print the numbers from !_0_! to !_10_!."
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Print variable !_i_!.">
+	            <![CDATA[console.log(i)]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use a while loop.">
+	            <![CDATA[while (]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The program should print the numbers !_0_! to !_10_!."
+	            hint="Hint: Change the condition to check whether !_i_! is less than or equal to !_10_!." >
+	            <![CDATA[
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Awesome!" />
+		</Exercise>
+	    <Exercise
+	        task="Now make the program print the numbers from !_10_! to !_20_!."
+	        level="3" >
+	        <CodeHint_2 />
+	        <ExpectedCode
+	            fail="Print variable !_i_!.">
+	            <![CDATA[console.log(i)]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use a while loop.">
+	            <![CDATA[while (]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The program should print the numbers from !_10_! to !_20_!."
+	            hint="Hint: Change the initial value of !_i_! to !_10_! and the while condition to !_i_! is less than or equal to !_20_!." >
+	            <![CDATA[
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Great. Let's mix it up." />
+		</Exercise>
+	    <Exercise
+	        task="Make the program print the numbers from !_10_! down to !_1_!."
+	        level="4" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="Print variable !_i_!.">
+	            <![CDATA[console.log(i)]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use a while loop.">
+	            <![CDATA[while (]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The program should print the numbers !_10_! down to !_1_!." 
+	            hint="Hint: Initialize variable !_i_! with !_10_!. Then decrease it in the while loop while it is greater then or equal to !_1_!. You can use the !_--_! operator." >
+	            <![CDATA[
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Good job. You see how powerful while loops are. But they can do even more." />
+		</Exercise>
+	    <Exercise
+	        task="Use a while loop to calculate the sum of all numbers from !_1_! to !_1000_!. Make it print only the sum, not the intermediate values."
+	        level="5" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var sum = 0;
+// Use a while loop to calculate the sum of 1 to 1000
+$code_hint$
+console.log(sum);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Calculate the result in variable !_sum_! and print it.">
+	            <![CDATA[console.log(sum)]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use a while loop to iterate a variable !_i_! from !_1_! to !_1000_!.">
+	            <![CDATA[while (]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="That's not the correct result."
+	            hint="Hint: Add each number to !_sum_! in each loop iteration, like !_sum = sum + i_!.">
+	            <![CDATA[500500]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome job! That's the correct result." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! You've finished the lesson about while loops. Play a bit more with the code now. Then continue with the lesson about for loops.">
+	    </Exercise>
+	</Lesson>
+
+    
+    
+    
+    
+	<Lesson
+        title="For Loops"
+		example="for (var i = 0; i &lt; 10; i++) {}"
+		description="In this lesson you'll learn about for loops.">
+
+	    <Exercise
+	        task="Check out this for loop, which is a shortcut for a while loop. First it declares a variable !_i_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+for (var i = 0$code_hint$; i <= 5$code_hint_1$; i++$code_hint_3$)
+{
+	console.log(i);$code_hint_2$
+}
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The for loop is executed while !_i_! is less than or equal to !_5_!."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The body of the for loop is executed in each loop iteration and prints !_i_!."
+	        level="1" >
+	        <CodeHint_2 />
+	    </Exercise>
+	    <Exercise
+	        task="After each iteration !_i_! is increased. Guess what the program prints?"
+	        level="1" >
+	        <CodeHint_3 />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[
+0
+1
+2
+3
+4
+5
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="It prints the numbers from !_0_! to !_5_!. The same could be done with a while loop. However the for loop is shorter." />
+	    </Exercise>
+	    <Exercise
+	        task="Now make the program print the numbers !_0_! to !_10_!."
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Print variable !_i_!.">
+	            <![CDATA[console.log(i)]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use a for loop.">
+	            <![CDATA[for (var]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The program should print the numbers !_0_! to !_10_!."
+	            hint="Hint: Change the loop condition to check whether !_i_! is less than or equal to !_10_!." >
+	            <![CDATA[
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Awesome." />
+		</Exercise>
+	    <Exercise
+	        task="Now make the program print the numbers !_10_! to !_20_!."
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Print variable !_i_!.">
+	            <![CDATA[console.log(i)]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use a for loop.">
+	            <![CDATA[for (var]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The program should print the numbers !_10_! to !_20_!."
+	            hint="Hint: Change the initial value of !_i_! as well as the loop condition." >
+	            <![CDATA[
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+				]]>
+	        </ExpectedOutput>
+	        <Run success="Great. Let's mix it up." />
+		</Exercise>
+	    <Exercise
+	        task="Write a for loop that prints the numbers from !_10_! down to !_1_!."
+	        level="4" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+// for (initialization; condition; increment)
+$code_hint$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Use a for loop to iterate a variable !_var i_!.">
+	            <![CDATA[for (var]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use the !_--_! operator to decrease the variable after each loop iteration.">
+	            <![CDATA[--]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Print the variable in each loop iteration.">
+	            <![CDATA[console.log(]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The output should be the numbers from !_10_! down to !_1_!.">
+	            <![CDATA[
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome! That's correct." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! You've learned how to use for loops in this lesson. Play a bit with the code on your own, then continue with the next lesson.">
+	    </Exercise>
+	</Lesson>
+    
+	
+    
+	
+	
+	<Lesson
+	    section="Use arrays to store values"
+        title="Arrays"
+		example="var a = [ 1, 2, 3 ];"
+		description="In this lesson you'll learn how to store values in arrays.">
+
+	    <Exercise
+	        task="Check out this program which defines a new array of the integer numbers !_4_!, !_8_! and !_2_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var a = [ 4, 8, 2 ]$code_hint$;
+console.log(a[0]$code_hint_2$);
+$code_hint_3$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="!_a[0]_! accesses the first element of the array, which has the index !_0_!."
+	        level="1" >
+	        <CodeHint_2 />
+	        <Run  success="Great! The first element of the array is the value !_4_!." />
+	    </Exercise>
+	    <Exercise
+	        task="Now print the second array element with the index !_1_! as well."
+	        level="3" >
+	        <CodeHint_3 />
+	         <ExpectedCode
+	            fail="Access the array element at index 1 with !_a[1]_! and print it.">
+	            <![CDATA[a[1]]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="That's not the expected output.">
+	            <![CDATA[
+4
+8
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Good job! Let's use a for loop to print all values next." />
+	    </Exercise>
+	    <Exercise
+	        task="This for loop iterates variable !_i_! from !_0_! to !_a.length_!, which holds the number of elements of the array."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var a = [ 4, 8, 2 ]$code_hint_2$;
+for (var i = 0; i < a.length$code_hint$; i++)
+{
+	$code_hint_1$
+}
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="Inside the for loop print the element with the index !_i_!."
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Use the code !_console.log(a[i])_! to print the array element at index !_i_!.">
+	            <![CDATA[console.log(a[i])]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="That's not the expected output.">
+	            <![CDATA[
+4
+8
+2
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome! Let's mix it up." />
+	    </Exercise>
+	    <Exercise
+	        task="Initialize !_a_! with the array !_[ 5, 7, 3, 9 ]_!."
+	        level="3" >
+	        <CodeHint_2 />
+	        <ExpectedOutput
+	            fail="That's not the expected output.">
+	            <![CDATA[
+5
+7
+3
+9
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Great!" />
+	    </Exercise>
+	    <Exercise
+	        task="This program creates an empty array with !_4_! elements. Each element has the default value !_0_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var a = new Array(4$code_hint$);
+console.log(a[0]);
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <Run  success="The default value !_0_! of the first array element is printed." />
+	    </Exercise>
+	    <Exercise
+	        task="Now we set the value of the first element to !_5_! with an assignment during program execution."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var a = new Array(4);
+a[0] = 5;$code_hint$
+console.log(a[0]);
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <Run  success="The value of the first array element is now !_5_!." />
+	    </Exercise>
+	    <Exercise
+	        task="Now set the value of the element at index !_1_! to !_7_! and then print this element."
+	        level="1" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="Use !_a[1] = 7_!.">
+	            <![CDATA[a[1] = 7]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Also print !_a[1]_!.">
+	            <![CDATA[console.log(a[1])]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="That's not the expected output.">
+	            <![CDATA[
+5
+7
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Good job!" />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! You've learned how to store values in arrays. Play a bit with the code on your own, then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+	
+	
+	<Lesson
+	    section="Use functions to group statements which perform a particular task"
+        title="Functions"
+		example="function foo() {}"
+		description="In this lesson you'll learn to use functions. A function is a collection of statements which are grouped together to perform an operation.">
+
+	    <Exercise
+	        task="Check out this program. It declares a function !_foo_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+foo();$code_hint$
+$code_hint_2$
+
+function foo()$code_hint_1$
+{
+	console.log("Inside foo");
+}
+
+$code_hint_3$
+				]]>
+	        </SourceCode>
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The function !_foo_! is called when the program is executed. Guess what the program does?"
+	        level="1" >
+	        <CodeHint />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[Inside foo]]>
+	        </ExpectedOutput>
+	        <Run  success="The program calls function !_foo_! which then prints '_Inside foo_'." />
+	    </Exercise>
+		<Exercise
+	        task="Add a second function call !_foo()_!."
+	        level="3" >
+	        <CodeHint_2 />
+	        <ExpectedOutput
+	            fail="Add a second call !_foo()_!.">
+	            <![CDATA[
+Inside foo
+Inside foo
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Great! Let's mix it up." />
+	    </Exercise>
+	    <Exercise
+	        task="Add another function !_bar_! which prints '_Inside bar_'."
+	        level="3" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="Add !_function bar()_!.">
+	            <![CDATA[function bar(]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="Call !_bar_! right after the two calls to !_foo_!."
+	        level="3" >
+	        <CodeHint_2 />
+	        <ExpectedCode
+	            fail="Call !_bar()_!.">
+	            <![CDATA[bar()]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The output should be three lines '_Inside foo_', '_Inside foo_' and '_Inside bar_'.">
+	            <![CDATA[
+Inside foo
+Inside foo
+Inside bar
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Great. You've seen how functions can group statements. They are even more powerful when they define parameters." />
+	    </Exercise>
+	    <Exercise
+	        task="Check out the !_print_! function below. It has a parameter !_str_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+print("Hello"$code_hint$);
+$code_hint_3$
+
+function print(str$code_hint_1$)
+{
+	console.log(str$code_hint_2$);
+}
+				]]>
+	        </SourceCode>
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The call of the function passes a string value for this parameter."
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="Inside the function the parameter value can be accessed just like a variable. Guess what the program prints?"
+	        level="1" >
+	        <CodeHint_2 />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[Hello]]>
+	        </ExpectedOutput>
+	        <Run  success="The string value '_Hello_' which is passed as a parameter is printed. " />
+	    </Exercise>
+	    <Exercise
+	        task="Now call !_print_! again and pass the string '_World_'."
+	        level="2" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="Call !_print_! and pass '_World_'.">
+	            <![CDATA[print("World")]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The output should be '_Hello_', '_World_'.">
+	            <![CDATA[
+Hello
+World
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Good job. A function can also take more than one parameter." />
+	    </Exercise>
+	    <Exercise
+	        task="Check out the !_printSum_! function below. It takes two numbers as parameters and prints the sum."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+printSum(10, 20);$code_hint_1$
+$code_hint_2$
+
+function printSum(a, b$code_hint$)
+{
+	console.log(a + b);
+}
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The function call also passes two numbers, one for each parameter."
+	        level="1" >
+	        <CodeHint_1 />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[30]]>
+	        </ExpectedOutput>
+	        <Run  success="The program prints the sum of the passed parameters !_10_! and !_20_!." />
+	    </Exercise>
+	    <Exercise
+	        task="Call !_printSum_! again to print the sum of !_100_! and !_200_! as well."
+	        level="3" >
+	        <CodeHint_2 />
+	        <ExpectedOutput
+	            fail="The output should be !_30_!, !_300_!.">
+	            <![CDATA[
+30
+300
+	            ]]>
+	        </ExpectedOutput>
+	        <Run  success="Great. Functions can not only execute statements, they can also return a value." />
+	    </Exercise>
+	    <Exercise
+	        task="Check out the !_sum_! function below. It takes two integers as parameters and returns the sum."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var x = sum(10, 20);$code_hint_1$
+console.log(x);
+$code_hint_3$
+
+function sum(a, b)
+{
+	return a + b;$code_hint$
+}
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The call to !_sum_! returns the value passed to the return statement inside the function."
+	        level="1" >
+	        <CodeHint_1 />
+	        <ExpectedOutput
+	            fail="Don't change the program, just run it.">
+	            <![CDATA[30]]>
+	        </ExpectedOutput>
+	        <Run  success="The program prints the returned value of the !_sum_! call." />
+	    </Exercise>
+	    <Exercise
+	        task="Call !_sum_! again to calculate the sum of !_100_! and !_200_! and print the result."
+	        level="3" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="Call !_sum_! and pass !_100_! and !_200_!.">
+	            <![CDATA[sum(100, 200)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="The output should be !_30_!, !_300_!.">
+	            <![CDATA[
+30
+300
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome. Let's mix it up." />
+	    </Exercise>
+	    <Exercise
+	        task="Write a !_mult_! function which takes two numbers as parameters and returns the product of both."
+	        level="4" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+console.log(mult(10, 20));
+console.log(mult(100, 200));
+	
+$code_hint$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="Add !_function mult(a, b)_!.">
+	            <![CDATA[function mult(]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Add a !_return_! statement inside the !_mult_! function.">
+	            <![CDATA[return]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use the !_mult_! function to calculate the result.">
+	            <![CDATA[console.log(mult(10, 20))]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use the !_mult_! function to calculate the result.">
+	            <![CDATA[console.log(mult(100, 200))]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well that's not the correct output.">
+	            <![CDATA[
+200
+20000
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome!" />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! You've learned how to use functions in this lesson. Play a bit with the code on your own, then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+	
+	
+	
+	
+	<Lesson
+	    section="Use object oriented programming"
+        title="Objects"
+		example="var rect = { width: 50, height:  50 }"
+		description="In this lesson you'll learn about objects. A JavaScript object is a complex variable, with properties and methods.">
+
+	    <Exercise
+	        task="Check out this program. It creates a new object !_rect_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var rect$code_hint$ = { width: 10, height$code_hint_1$: 20 };
+
+console.log(rect.width)$code_hint_2$;
+$code_hint_3$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The object has the properties !_width_! and !_height_!."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The program prints the !_width_! property of the object."
+	        level="1" >
+	        <CodeHint_2 />
+	        <Run  success="The !_width_! property has the value !_10_!." />
+	    </Exercise>
+	    <Exercise
+	        task="Now print the !_height_! property of the object as well."
+	        level="3" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="Use !_console.log(rect.height)_! to access and print the property value.">
+	            <![CDATA[console.log(rect.height)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well that's not the correct output.">
+	            <![CDATA[
+10
+20
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Good job!" />
+	    </Exercise>
+	    <Exercise
+	        task="Now we change the value of the !_width_! property to !_100_! during program execution and print it afterwards."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+var rect = { width: 10, height: 20 };
+
+console.log(rect.width);
+console.log(rect.height);
+
+rect.width = 100;$code_hint$
+console.log(rect.width);
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <Run  success="The new value !_100_! of the property is printed." />
+	    </Exercise>
+	    <Exercise
+	        task="Now change the value of the !_height_! property to !_200_! and print it."
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            start_line="6"
+	            fail="Use !_rect.height = 200_! to change the property value.">
+	            <![CDATA[rect.height = 200]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            start_line="6"
+	            fail="Use !_console.log(rect.height)_! to access and print the property value.">
+	            <![CDATA[console.log(rect.height)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well that's not the correct output.">
+	            <![CDATA[
+10
+20
+100
+200
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome!" />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! You've learned to create and modify an object with properties in this lesson. Play a bit with the code on your own, then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+	
+	
+	
+	
+	<Lesson
+        title="Constructors"
+		example="var rect = new rectangle()"
+		description="In this lesson you'll learn to create objects with constructor functions.">
+
+	    <Exercise
+	        task="Check out this program. It defines a constructor function !_rectangle_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+function rectangle$code_hint$(width$code_hint_1$, height)
+{ 
+	this.width = width$code_hint_4$;
+	this.height = height; 
+}
+
+var rect$code_hint_5$ = new rectangle$code_hint_2$(10$code_hint_3$, 20);
+console.log(rect.width$code_hint_6$);
+$code_hint_7$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="The constructor function takes !_width_! and !_height_! as parameters."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The !_new_! keyword is used to call the constructor and create a new object."
+	        level="1" >
+	        <CodeHint_2 />
+	    </Exercise>
+	    <Exercise
+	        task=" The values !_10_! and !_20_! are passed as !_width_! and !_height_! parameters."
+	        level="1" >
+	        <CodeHint_3 />
+	    </Exercise>
+	    <Exercise
+	        task="Inside the constructor function the !_this_! keyword is used to initialize properties !_width_! and !_height_! with the respective parameter values."
+	        level="1" >
+	        <CodeHint_4 />
+	    </Exercise>
+	    <Exercise
+	        task="The newly created object is stored in variable !_rect_!."
+	        level="1" >
+	        <CodeHint_5 />
+	    </Exercise>
+	    <Exercise
+	        task="Finally, the !_width_! property of the object is printed. Guess what the program prints?"
+	        level="1" >
+	        <CodeHint_6 />
+	        <Run  success="The value !_10_! is printed, which was passed as the !_width_! to the constructor." />
+	    </Exercise>
+	    <Exercise
+	        task="Print the !_height_! property of the object as well."
+	        level="3" >
+	        <CodeHint_7 />
+	        <ExpectedCode
+	            fail="Use !_console.log(rect.height)_! to access and print the property value.">
+	            <![CDATA[console.log(rect.height)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well that's not the correct output.">
+	            <![CDATA[
+10
+20
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Good job! Let's use the constructor to create more objects next." />
+	    </Exercise>
+	    <Exercise
+	        task="Create another !_rectangle_! object with width/height !_100_!/!_200_! and assign it to variable !_rect2_!."
+	        level="4" >
+	        <ExpectedCode
+	            fail="Use !_var rect2 = new rectangle_! to create the object.">
+	            <![CDATA[var rect2 = new rectangle]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use !_var rect2 = new rectangle(100, 200)_! to pass width and height.">
+	            <![CDATA[var rect2 = new rectangle(100, 200)]]>
+	        </ExpectedCode>
+	        <CodeHint_7 />
+	    </Exercise>
+	    <Exercise
+	        task="Print the !_width_! and !_height_! property vlaues of !_rect2_! as well."
+	        level="3" >
+	        <CodeHint_7 />
+	        <ExpectedCode
+	            fail="Use !_console.log(rect2.width)_! to access and print the property value.">
+	            <![CDATA[console.log(rect2.width)]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Use !_console.log(rect2.height)_! to access and print the property value.">
+	            <![CDATA[console.log(rect2.height)]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well that's not the correct output.">
+	            <![CDATA[
+10
+20
+100
+200
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome! The !_rectangle_! constructor makes it easy to create new rectangle objects." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! You've learned how to use constructor methods to create new objects. Play a bit with the code on your own, then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+	
+	
+	
+	<Lesson
+        title="Methods"
+		example="this.area = function() {}"
+		description="In this lesson you'll learn how to define object methods. An object is a bundle of state and behavior. Properties define the state, methods define the behavior.">
+
+	    <Exercise
+	        task="Check out this program, which defines a constructor function !_rectangle_!. Inside the constructor we define an object method !_area_!."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+$space$
+function rectangle(width, height)
+{ 
+	this.width = width;
+	this.height = height;
+	
+	this.area$code_hint$ = function()
+	{
+		return$code_hint_2$ this.width$code_hint_1$ * this.height;
+	};
+	$code_hint_4$
+}
+
+var rect = new rectangle(10, 20);
+console.log(rect.area()$code_hint_3$);
+$code_hint_5$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="Inside the object method we can access the objects !_width_! and !_height_! properties using the !_this_! keyword."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="The object method calculates the rectangles area and returns it with a !_return_! statement just like a function."
+	        level="1" >
+	        <CodeHint_2 />
+	    </Exercise>
+	    <Exercise
+	        task="We can now call the !_area()_! method on the newly created !_rectangle_! object !_rect_!."
+	        level="1" >
+	        <CodeHint_3 />
+	        <Run  success="The program prints the calculated area !_200_! of our rectangle object." />
+	    </Exercise>
+	    <Exercise
+	        task="Define another method !_aspectRatio_! which calculate the aspect ratio, width divided by height, of the rectangle."
+	        level="4" >
+	        <CodeHint_4 />
+	        <ExpectedCode
+	            fail="Add the code !_this.aspectRatio = function() {}_! to define the method.">
+	            <![CDATA[this.aspectRatio = function()]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="Inside the !_aspectRatio_! method use !_return this.width / this.height;_! to calculate and return the aspect ratio.">
+	            <![CDATA[return this.width / this.height]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="Call the method !_aspectRatio_! of the !_rect_! object and print the result."
+	        level="4" >
+	        <CodeHint_5 />
+	        <ExpectedCode
+	            fail="use !_console.log(rect.aspectRatio());_! to calculate and print the aspect ratio.">
+	            <![CDATA[rect.aspectRatio()]]>
+	        </ExpectedCode>
+	        <ExpectedOutput
+	            fail="Well that's not the correct output.">
+	            <![CDATA[
+200
+0.5
+				]]>
+	        </ExpectedOutput>
+	        <Run  success="Awesome! The program now calculates and prints the area !_200_! and aspect ratio !_0.5_! of the rectangle." />
+	    </Exercise>
+	    <Exercise
+	        task="Congratulations! You've learned how to define methods. Play a bit with the code on your own, then continue with the next lesson." >
+	    </Exercise>
+	</Lesson>
+	
+</Course>

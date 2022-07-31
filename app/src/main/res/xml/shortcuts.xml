@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:icon="@mipmap/ic_shortcut_git"
+        android:enabled="true">
+        <intent
+            android:targetPackage="com.aide.ui"
+            android:action="action.git"
+            android:targetClass="com.miao.aide.application.activity.NoDisplayActivity" />
+        <categories
+            android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:icon="@mipmap/ic_shortcut_new_project"
+        android:enabled="true">
+        <intent
+            android:targetPackage="com.aide.ui"
+            android:action="action.new.project"
+            android:targetClass="com.miao.aide.application.activity.NoDisplayActivity" />
+        <categories
+            android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

@@ -1,0 +1,30 @@
+<Course
+    release_date="2014-08-10" 
+    title="Android NDK Development"
+    code_section="Build your own Android app using C/C++"
+	code_template="Start with this empty project template to create your own program."
+    explore_section="Explore Android sample apps, which use the Native Development Kit and C/C++ to implement features">
+
+    <Sample
+        id="San Angeles 3D"
+        title="San Angeles 3D"
+        description="Explore this Open GL 3D animation demo app implemented in C/C++."
+        project_dir=""
+        release_date="2014-08-15" >
+
+        <CodeFile name="demo.c" />
+        <CodeFile name="DemoActivity.java" />
+    </Sample>
+
+    <Sample
+        id="Native Audio"
+        title="Native Audio"
+        description="Explore this native Audio sample app which uses native code to play sounds using OpenSL ES."
+        project_dir=""
+        release_date="2014-08-15" >
+
+        <CodeFile name="native-audio-jni.c" />
+        <CodeFile name="NativeAudio.java" />
+    </Sample>
+
+</Course>

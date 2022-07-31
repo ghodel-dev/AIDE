@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_autosave_entries">
+        <item>关闭</item>
+        <item>每隔15秒</item>
+        <item>每隔1分钟</item>
+        <item>每隔5分钟</item>
+    </string-array>
+    <string-array name="layout_design_activity_xml_theme">
+        <item>小型亮主题</item>
+        <item>小型暗主题</item>
+        <item>亮主题</item>
+        <item>暗主题</item>
+    </string-array>
+</resources>

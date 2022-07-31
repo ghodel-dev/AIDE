@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingLeft="5.0dip"
+    android:paddingRight="5.0dip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.margaritov.preference.colorpicker.ColorPickerView
+        android:id="@id/color_picker_view"
+        android:tag="portrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layerType="software" />
+    <LinearLayout
+        android:id="@id/text_hex_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginBottom="5.0dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_weight="0.8">
+            <net.margaritov.preference.colorpicker.ColorPickerPanelView
+                android:id="@id/old_color_panel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+            <net.margaritov.preference.colorpicker.ColorPickerPanelView
+                android:id="@id/new_color_panel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+        <EditText
+            android:id="@id/hex_val"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="HEX"
+            android:singleLine="true"
+            android:maxLength="7"
+            android:layout_weight="1.0"
+            android:inputType="textCapCharacters"
+            android:imeOptions="actionDone" />
+    </LinearLayout>
+</LinearLayout>

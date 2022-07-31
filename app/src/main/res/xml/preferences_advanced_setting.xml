@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:key="preference_screen"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        android:title="Editor">
+        <PreferenceCategory
+            android:title="color scheme">
+            <Preference
+                android:title="Color scheme"
+                android:key="preference_highlight" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="Shortcut symbol">
+            <Preference
+                android:title="Custom shortcut symbols"
+                android:key="preference_quick_key"
+                android:summary="Custom editor shortcut symbol" />
+            <SwitchPreference
+                android:title="Disable keyboard shortcuts "
+                android:key="disable_quickkeybar"
+                android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="typeface">
+            <EditTextPreference
+                android:hint="Font path"
+                android:selectAllOnFocus="true"
+                android:title="file path"
+                android:key="advanced_setting_editor_font"
+                android:summary="Set the editor font. Leave blank to use default" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="background">
+            <EditTextPreference
+                android:hint="Editor background"
+                android:selectAllOnFocus="true"
+                android:title="Picture path"
+                android:key="advanced_setting_editor_bg"
+                android:summary="Set editor background image" />
+            <Preference
+                android:title="Select Picture"
+                android:key="choose_bg_image" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="Project">
+        <PreferenceCategory
+            android:title="gradle">
+            <SwitchPreference
+                android:title="Enable gradle system"
+                android:key="advanced_setting_enable_gradle"
+                android:summary="Complete gradle, SDK, NDK, JDK support"
+                android:defaultValue="false" />
+            <Preference
+                android:title="Gradle configure"
+                android:key="advanced_setting_pref_gradle_config" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="Resguard">
+            <SwitchPreference
+                android:title="Enable Resguard"
+                android:key="adset_use_resguard"
+                android:summary="proguard resource"
+                android:defaultValue="false" />
+            <Preference
+                android:title="Add configure file to project"
+                android:key="add_proguard_config" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="StringFog">
+            <SwitchPreference
+                android:title="Enable stringFog"
+                android:key="advanced_setting_enable_stringfog"
+                android:summary="Encrypting strings in class at compile time"
+                android:defaultValue="false" />
+            <Preference
+                android:title="Function description"
+                android:key="preference_stringfog" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="Build">
+            <SwitchPreference
+                android:title="Use D8 for Dexing"
+                android:key="adset_use_d8"
+                android:summary="use dx on dexing"
+                android:defaultValue="false" />
+            <SwitchPreference
+                android:title="Java 1.8"
+                android:key="adset_use_d8_18"
+                android:summary="java 1.8"
+                android:dependency="adset_use_d8"
+                android:defaultValue="false" />
+            <SwitchPreference
+                android:title="Use ZipAligner"
+                android:key="adset_use_zipalign"
+                android:summary="Best on targetSdk 30+"
+                android:defaultValue="false" />
+            <SwitchPreference
+                android:title="Enable APKtoAAB"
+                android:key="adset_use_apktoaab"
+                android:summary="Convert APK to AAB"
+                android:defaultValue="false" />
+            <SwitchPreference
+                android:title="Use Apks instead APK"
+                android:key="adset_use_aabtoapks"
+                android:summary="Install the apks instead apk"
+                android:dependency="adset_use_apktoaab"
+                android:defaultValue="false" />
+            <SwitchPreference
+                android:title="Fix the multiDex"
+                android:key="adset_use_dexmerger"
+                android:summary="Fix AIDE multidex bug"
+                android:defaultValue="true" />
+            <SwitchPreference
+                android:title="Use D8 for DexMerge"
+                android:key="useD8Merge"
+                android:summary="use dx on dexmerge"
+                android:dependency="adset_use_dexmerger"
+                android:defaultValue="false" />
+            <SwitchPreference
+                android:title="Enable adrt debug"
+                android:key="advanced_setting_enable_adrt"
+                android:summary="Debug mode cannot be used after closing. Restart aide and rebuild the project to take effect"
+                android:defaultValue="true" />
+            <SwitchPreference
+                android:title="Redefine APK build path"
+                android:key="advanced_setting_adjust_apk_build_path"
+                android:summary="Output the APK in the -> /build/bin/ , instead of /sdcard/Android/data/pkg/cache"
+                android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="new project">
+            <EditTextPreference
+                android:hint="com.mycompany."
+                android:selectAllOnFocus="true"
+                android:title="Package name prefix"
+                android:key="advanced_setting_package_prefix"
+                android:summary="Set the package name prefix of the project to be created. If left blank, the default will be used"
+                android:defaultValue="com.mycompany." />
+            <EditTextPreference
+                android:selectAllOnFocus="true"
+                android:title="Custom project home"
+                android:key="project_home"
+                android:summary="default: /sdcard/AppProject" />
+            <EditTextPreference
+                android:selectAllOnFocus="true"
+                android:title="Class comments"
+                android:key="class_notes"
+                android:summary="Comments on the head of the class" />
+            <SwitchPreference
+                android:title="Location of the comment"
+                android:key="class_notes_site"
+                android:summary="The location of the header comment, selected to be placed before the class name, otherwise placed before the package name"
+                android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="Display">
+        <PreferenceCategory
+            android:title="theme">
+            <com.miao.aide.preference.PreferenceTheme
+                android:title="AppTheme" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="file browser">
+            <SwitchPreference
+                android:title="Enable drawer file browser"
+                android:key="advanced_setting_enable_drawer"
+                android:summary="Whether to enable drawer browser"
+                android:defaultValue="true" />
+            <SwitchPreference
+                android:title="Enable Fab button"
+                android:key="enableMainMasterButton"
+                android:dependency="advanced_setting_enable_drawer"
+                android:defaultValue="false" />
+            <SwitchPreference
+                android:title="Enable DrawerToggle"
+                android:key="enableDrawerToggle"
+                android:dependency="advanced_setting_enable_drawer"
+                android:defaultValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="window">
+            <SwitchPreference
+                android:title="Adjustpan mode"
+                android:key="use_adjustPan"
+                android:summary="Do not want the view to be squashed by the input method. Turn this on"
+                android:defaultValue="false" />
+            <SwitchPreference
+                android:title="Dark status bar"
+                android:key="dark_statusbar"
+                android:summary="Android 6.0 + is required and is the default light theme"
+                android:defaultValue="false" />
+            <SwitchPreference
+                android:title="Adjust actionbar tab"
+                android:key="adjust_actionbar"
+                android:summary="Android 10 can try, restart to take effect"
+                android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="Translation">
+        <PreferenceCategory
+            android:title="Code completion">
+            <SwitchPreference
+                android:title="Display apiversion info"
+                android:key="completion_show_api_info"
+                android:summary="Shows the SDK version in which API was added / discarded / removed"
+                android:defaultValue="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="Shortcut code">
+        <PreferenceCategory
+            android:title="Menu shortcut code">
+            <SwitchPreference
+                android:title="Enable"
+                android:key="advanced_setting_enable_menu_code"
+                android:defaultValue="true" />
+            <EditTextPreference
+                android:selectAllOnFocus="true"
+                android:title="Custom code file path"
+                android:key="menucode_file"
+                android:summary="If not, the default will be used" />
+            <Preference
+                android:summary="default file: /sdcard/.aide/data/menucode/menucode.txt" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="Gradle completion">
+            <SwitchPreference
+                android:title="Enable"
+                android:key="enable_gradle_comple"
+                android:defaultValue="true" />
+            <Preference
+                android:title="Gradle completion"
+                android:key="gradle_comple"
+                android:summary="One rule per line" />
+            <EditTextPreference
+                android:title="Custom gradle completion file"
+                android:key="gradle_comple_file"
+                android:summary="One rule per line" />
+            <Preference
+                android:summary="Restart takes effect" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>

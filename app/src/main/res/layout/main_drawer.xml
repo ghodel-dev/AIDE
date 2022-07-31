@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/mainFrame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/mainActionBarPopupAnchor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <com.miao.view.VPDrawerLayout
+        android:id="@id/mainDrawerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:id="@id/edititBgView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop" />
+            <com.miao.aide.widget.CustomSplitView
+                android:id="@id/mainSplitView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <FrameLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:id="@id/mainCodeEmptyView"
+                        android:visibility="visible"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        style="@style/EmptyEditorBackground">
+                        <include
+                            layout="@layout/view_noOpenFileView" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <com.aide.ui.AIDEEditorPager
+                            android:id="@id/mainCodePageView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0" />
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:id="@id/mainSearchBarNoTabs"
+                            android:paddingLeft="2.0dip"
+                            android:paddingTop="5.0dip"
+                            android:paddingRight="2.0dip"
+                            android:paddingBottom="1.0dip"
+                            android:visibility="gone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="?android:actionBarSize">
+                            <TextView
+                                android:id="@id/mainSearchLabel"
+                                android:padding="3.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Search:"
+                                style="@style/SearchLabel" />
+                            <EditText
+                                android:id="@id/mainSearchBox"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/SearchEditText" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+                <View
+                    android:tag="split_separator"
+                    android:layout_width="0.0dip"
+                    android:layout_height="0.0dip" />
+                <View
+                    android:tag="BrowserPager"
+                    android:layout_width="0.0dip"
+                    android:layout_height="0.0dip" />
+            </com.miao.aide.widget.CustomSplitView>
+            <LinearLayout
+                android:gravity="center|right|top"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <com.aide.ui.AIDEAnalysisProgressBar
+                    android:id="@id/mainErrorProgress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3.0dip"
+                    style="?android:progressBarStyleHorizontal" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center|right|top"
+                android:orientation="vertical"
+                android:id="@id/mainActionBarContainerNoTabs"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/mainActionBarNoTabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ActionBarTopRight" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="bottom|center|right"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <ImageButton
+                    android:id="@id/mainMasterButton"
+                    android:background="@drawable/fab_oval_ripple"
+                    android:focusable="true"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_margin="16.0dip"
+                    android:src="?icon_more"
+                    android:tint="#ffffffff"
+                    android:elevation="4.0dip" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+                    <LinearLayout
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:id="@id/mainQuickKeyBarContainer"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+                    <AbsoluteLayout
+                        android:id="@id/mainPopupAnchorContainer"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+                </RelativeLayout>
+                <com.miao.view.KeyboardFillView
+                    android:background="?android:windowBackground"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_gravity="right"
+            android:background="?android:windowBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <fragment
+                android:name="com.miao.aide.fragment.DebugFragment"
+                android:id="@id/lommeregnerv2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="left"
+            android:background="?android:windowBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <com.aide.ui.browsers.BrowserPager
+                android:id="@id/mainBrowserPager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </com.miao.view.VPDrawerLayout>
+</FrameLayout>

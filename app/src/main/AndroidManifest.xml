@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aide.ui.mod">
+	
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS" />
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="com.aide.ui.mod_com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission
+        android:name="com.aide.ui.mod.permission.C2D_MESSAGE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission
+        android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission
+        android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <permission
+        android:name="com.aide.ui.mod.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.type.pc"
+        android:required="false" />
+    <supports-screens
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+	
+	
+    <application
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.miao.aide.application.App"
+        android:largeHeap="true"
+        android:fullBackupOnly="true"
+        android:fullBackupContent="@xml/aide_backup_rules"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round">
+        <activity
+            android:theme="@android:style/Theme.NoDisplay"
+            android:name="com.miao.activity.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="file" />
+                <data
+                    android:mimeType="*/*" />
+                <data
+                    android:pathPattern=".*\\.classpath" />
+                <data
+                    android:pathPattern=".*\\.java" />
+                <data
+                    android:pathPattern=".*\\.xml" />
+                <data
+                    android:pathPattern=".*\\.txt" />
+                <data
+                    android:host="*" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:name="com.miao.aide.AideMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:configChanges="keyboardHidden|orientation|screenSize|uiMode"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:banner="@drawable/banner" />
+        <activity
+            android:name="com.dropbox.client2.android.AuthActivity"
+            android:launchMode="singleTask"
+            android:configChanges="keyboard|orientation">
+            <intent-filter>
+                <data
+                    android:scheme="db-fkerp7oej8u61j0" />
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/ActivityActionbarThemeLight"
+            android:name="com.miao.activity.TerminalActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:theme="@style/ActivityActionbarThemeLight"
+            android:name="com.a4455jkjh.ManifestActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.miao.aide.application.activity.AdvancedSettingsActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.miao.aide.highlight.HighlightActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.miao.aide.application.activity.permission.ManifestActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.miao.aide.application.activity.icons.IconActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.miao.aide.application.activity.androidr.AndroidRActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:theme="@style/theme_translation"
+            android:name="com.miao.translate.web.WebTranslateActivity" />
+        <activity
+            android:name="com.miao.util.CrashUtils$CrashActiviy" />
+        <activity
+            android:theme="@style/ActivityPreferencesThemeLight"
+            android:label="@string/command_settings"
+            android:name="com.miao.aide.application.activity.AidePreferencesActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="uiMode" />
+        <activity
+            android:theme="@style/ActivityPreferencesThemeLight"
+            android:label="AIDE Help"
+            android:name="com.aide.ui.activities.HelpViewActivity"
+            android:taskAffinity="com.aide.ui.help"
+            android:excludeFromRecents="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/AndroidAppTheme"
+            android:label="My Android App"
+            android:icon="@drawable/ic_app_launcher"
+            android:name="com.aide.ui.activities.AndroidTrainerActivity"
+            android:taskAffinity="com.aide.trainer"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityActionbarThemeLight"
+            android:label=""
+            android:name="com.aide.ui.activities.TrainerCourseActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityGotoThemeLight"
+            android:name="com.aide.ui.activities.GotoBrowserActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityActionbarThemeLight"
+            android:label="Git commit"
+            android:name="com.aide.ui.activities.CommitActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityShopPopup"
+            android:label="Get access"
+            android:name="com.aide.ui.activities.ShopExpertPopupActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityShopPopup"
+            android:label="Get access"
+            android:name="com.aide.ui.activities.ShopLearningPopupActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityPreferencesThemeLight"
+            android:label="About"
+            android:name="com.aide.ui.preferences.AboutActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user" />
+        <activity
+            android:theme="@style/ActivityPreferencesThemeLight"
+            android:label="@string/command_settings"
+            android:name="com.aide.ui.preferences.PreferencesActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user" />
+        <activity
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:label="@string/command_design"
+            android:name="com.aide.ui.htmluidesigner.PhonegapDesignActivity"
+            android:process=":Phonegap"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityActionbarThemeLight"
+            android:label=""
+            android:name="com.aide.ui.build.java.RunTrainerJavaActivity"
+            android:process=":JavaTrainerConsole"
+            android:taskAffinity="com.aide.ui.javaconsole"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityActionbarThemeLight"
+            android:label=""
+            android:name="com.aide.ui.build.java.RunJavaActivity"
+            android:process=":JavaConsole"
+            android:taskAffinity="com.aide.ui.javaconsole"
+            android:excludeFromRecents="false"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|locale|orientation|screenSize" />
+        <activity
+            android:theme="@style/ActivityActionbarThemeLight"
+            android:label=""
+            android:name="com.aide.ui.build.nativeexecutable.RunNativeExecutableActivity"
+            android:process=":NativeExecutableConsole"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityActionbarThemeLight"
+            android:label=""
+            android:name="com.aide.ui.build.javascript.RunJavaScriptActivity"
+            android:process=":JavaScriptConsole"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" />
+        <activity
+            android:theme="@style/ActivityThemeDesignerLight"
+            android:label="@string/command_design"
+            android:icon="@drawable/ic_launcher_designer"
+            android:name="com.aide.uidesigner.XmlLayoutDesignActivity"
+            android:process=":XmlDesigner"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:theme="@style/ActivityThemeWebDesigner"
+            android:label=""
+            android:name="com.aide.ui.htmluidesigner.WebDesignActivity"
+            android:process=":Webview"
+            android:excludeFromRecents="true"
+            android:screenOrientation="user"
+            android:configChanges="keyboard|keyboardHidden|locale" />
+        <service
+            android:name="com.aide.ui.build.packagingservice.ExternalPackagingService"
+            android:exported="false"
+            android:process=":PackagingService" />
+        <service
+            android:name="com.aide.engine.service.CodeAnalysisEngineService"
+            android:exported="false"
+            android:process=":EngineService" />
+        <service
+            android:name="com.aide.ui.scm.ExternalGitService"
+            android:exported="false"
+            android:process=":GitService" />
+        <receiver
+            android:name="com.aide.ui.debugger.ADRTReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.adrt.LOGCAT_ENTRIES" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="com.adrt.CONNECT" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="com.adrt.STOP" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="com.adrt.BREAKPOINT_HIT" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="com.adrt.FIELDS" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.aide.ui.TrainerRuntimeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.aide.trainer.APP_RUN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.aide.ui.trainer.TrainerNotificationAlarmReceiver" />
+        <receiver
+            android:name="com.aide.ui.PromoNotificationAlarmReceiver" />
+        <receiver
+            android:name="com.aide.ui.PackageUpgradedBroadcastReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.aide.ui.UserPresentBroadcastReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.aide.ui.mod.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2926119607791157~3039278622" />
+        <provider
+            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+            android:exported="false"
+            android:authorities="com.aide.ui.mod.crashlyticsinitprovider"
+            android:initOrder="90" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:permission="android.permission.INSTALL_PACKAGES"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <provider
+            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+            android:exported="false"
+            android:authorities="com.aide.ui.mod.mobileadsinitprovider"
+            android:initOrder="100" />
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true">
+            <intent-filter
+                android:priority="-500">
+                <action
+                    android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.aide.ui.mod.firebaseinitprovider"
+            android:initOrder="100" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="3.0" />
+        <activity
+            android:theme="@style/ActivityTranslucent"
+            android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:theme="@style/ActivityTranslucent"
+            android:name="com.blankj.utilcode.util.UtilsTransActivity"
+            android:multiprocess="true"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <provider
+            android:name="com.blankj.utilcode.util.UtilsFileProvider"
+            android:exported="false"
+            android:authorities="com.aide.ui.mod.utilcode.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/util_code_provider_paths" />
+        </provider>
+        <service
+            android:name="com.blankj.utilcode.util.MessengerUtils$ServerService"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.aide.ui.messenger" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="Default" />
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="IMainActivity"
+            android:value="com.miao.aide.GradleBuilEvent,com.miao.aide.DexMergerEvent" />
+    </application>
+</manifest>

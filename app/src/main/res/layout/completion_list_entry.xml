@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="6.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/completionEntryImage"
+        android:layout_marginLeft="6.0dip"
+        android:layout_marginRight="0.0dip"
+        style="@style/BrowserImageSmall" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip">
+        <TextView
+            android:id="@id/completionEntryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:layout_weight="1.0"
+            style="@style/BrowserLabelSmall" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@id/apiInfoView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="12.0dip"
+                android:layout_height="12.0dip"
+                android:layout_marginRight="5.0dip"
+                android:src="@drawable/ic_apilevel" />
+            <TextView
+                android:textSize="11.0sp"
+                android:textColor="#ffaaaaaa"
+                android:id="@id/apiInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:layout_weight="1.0"
+                style="@style/BrowserLabelSmall" />
+        </LinearLayout>
+        <TextView
+            android:textColor="#ffaaaaaa"
+            android:id="@id/translation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:layout_weight="1.0"
+            style="@style/BrowserLabelSmall" />
+    </LinearLayout>
+    <ImageView
+        android:id="@id/completionHelpButton"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:src="@drawable/info"
+        style="@style/BrowserHelpButton" />
+</LinearLayout>

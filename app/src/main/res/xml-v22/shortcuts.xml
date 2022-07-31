@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:icon="@mipmap/ic_shortcut_git"
+        android:enabled="true"
+        android:shortcutId="git"
+        android:shortcutShortLabel="@string/command_files_clone_git_repository"
+        android:shortcutLongLabel="@string/command_files_clone_git_repository"
+        android:shortcutDisabledMessage="@string/command_files_clone_git_repository">
+        <intent
+            android:targetPackage="com.aide.ui"
+            android:action="action.git"
+            android:targetClass="com.miao.aide.application.activity.NoDisplayActivity" />
+        <categories
+            android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:icon="@mipmap/ic_shortcut_new_project"
+        android:enabled="true"
+        android:shortcutId="new_project"
+        android:shortcutShortLabel="@string/command_files_create_new_project"
+        android:shortcutLongLabel="@string/command_files_create_new_project"
+        android:shortcutDisabledMessage="@string/command_files_create_new_project">
+        <intent
+            android:targetPackage="com.aide.ui"
+            android:action="action.new.project"
+            android:targetClass="com.miao.aide.application.activity.NoDisplayActivity" />
+        <categories
+            android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>
